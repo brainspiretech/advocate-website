@@ -1,15 +1,38 @@
 # Apache / cPanel Configuration for Apex Chambers Static Site
-Options -MultiViews
-RewriteEngine On
+Options -MultiViews +FollowSymLinks
 
-# Enforce clean directory index resolution
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.*)$ $1/index.html [L]
+# Ensure strict MIME types for all static assets
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js .mjs
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+  AddType image/svg+xml .svg
+  AddType image/x-icon .ico
+  AddType application/json .json
+</IfModule>
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Direct pass-through for existing physical files and directories (prevents rewriting CSS/JS/images)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Guarantee _next static assets are never rewritten to HTML
+  RewriteRule ^_next/(.*)$ _next/$1 [L]
+
+  # Enforce clean directory index resolution
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
 
 # Custom 404 Error Document
 ErrorDocument 404 /404.html
