@@ -55,10 +55,10 @@
   --color-border-focus: var(--border-focus);
 
   --font-serif:
-    var(--font-cormorant), Georgia, Cambria, "Times New Roman", Times, serif;
+    var(--font-lora), Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans:
-    var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+    var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 }
 
 body {
@@ -67,14 +67,20 @@ body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
-h2,
+h2 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   letter-spacing: -0.01em;
 }

@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Column 2: Core Practice Disciplines */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-base text-primary-foreground tracking-wide border-b border-primary-light/50 pb-2">
+            <h4 className="font-sans font-semibold text-xs tracking-wider uppercase text-accent border-b border-primary-light/50 pb-2">
               Practice Disciplines
             </h4>
             <ul className="space-y-2.5 text-xs text-primary-foreground/75">
@@ -78,7 +78,7 @@ export function Footer() {
 
           {/* Column 3: Institutional Links & Jurisdictions */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-base text-primary-foreground tracking-wide border-b border-primary-light/50 pb-2">
+            <h4 className="font-sans font-semibold text-xs tracking-wider uppercase text-accent border-b border-primary-light/50 pb-2">
               Institutional Overview
             </h4>
             <ul className="space-y-2 text-xs text-primary-foreground/75">
@@ -133,7 +133,7 @@ export function Footer() {
 
           {/* Column 4: Chambers Address & Direct Contact */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-base text-primary-foreground tracking-wide border-b border-primary-light/50 pb-2">
+            <h4 className="font-sans font-semibold text-xs tracking-wider uppercase text-accent border-b border-primary-light/50 pb-2">
               Chambers Location
             </h4>
             <div className="space-y-3 text-xs text-primary-foreground/75">
