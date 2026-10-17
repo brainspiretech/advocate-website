@@ -1,7 +1,7 @@
 # Build Plan
 
 ## Milestone 1: Regulatory Foundation & Static Design System
-- [ ] 1. **Static Export Configuration & Centralized Brand Design System** - Configure `next.config.ts` for static HTML export (`output: 'export'`), establish `src/config/firm.ts` with extensible dummy firm data, and configure CSS design tokens in `globals.css` so branding and colors can be customized centrally.
+- [x] 1. **Static Export Configuration & Centralized Brand Design System** - Configure `next.config.ts` for static HTML export (`output: 'export'`), establish `src/config/firm.ts` with extensible dummy firm data, and configure CSS design tokens in `globals.css` so branding and colors can be customized centrally.
 - [ ] 2. **BCI Rule 36 Disclaimer Gate & Standalone Page** - Build the mandatory pre-entry disclaimer modal with consent checkbox, "Accept & Proceed" and "Exit" actions, session persistence (`localStorage`), and the standalone `/disclaimer` route.
 - [ ] 3. **Site Shell, Header & Institutional Footer** - Create a responsive navigation bar, mobile drawer, and institutional footer with firm details, compliance disclosures, and navigation links.
 

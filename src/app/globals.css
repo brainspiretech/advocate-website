@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Palette - Deep Regal Navy & Warm Slate */
+  --primary: #0b192c;
+  --primary-light: #182b45;
+  --primary-dark: #060e19;
+  --primary-foreground: #ffffff;
+
+  /* Accent - Warm Muted Brass / Classic Legal Gold */
+  --accent: #c5a880;
+  --accent-hover: #b39266;
+  --accent-light: #f5eedc;
+  --accent-foreground: #0b192c;
+
+  /* Surfaces & Backgrounds */
+  --background: #fbfbfc;
+  --surface: #ffffff;
+  --surface-subtle: #f4f5f8;
+  --surface-muted: #eef0f4;
+
+  /* Text & Content */
+  --foreground: #151c28;
+  --foreground-muted: #526071;
+  --foreground-subtle: #7b8a9b;
+
+  /* Borders & Dividers */
+  --border: #e2e6ed;
+  --border-subtle: #eceff4;
+  --border-focus: #c5a880;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-foreground: var(--primary-foreground);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-surface-muted: var(--surface-muted);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-focus: var(--border-focus);
+
+  --font-serif:
+    var(--font-cormorant), Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans:
+    var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
 }
