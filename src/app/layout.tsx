@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { DisclaimerModal } from "@/components/disclaimer/DisclaimerModal";
 import { firmConfig } from "@/config/firm";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${plusJakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent/20 selection:text-primary">
+        <DisclaimerModal />
         {children}
       </body>
     </html>
