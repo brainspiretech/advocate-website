@@ -52,6 +52,7 @@
 
 - Tailwind CSS for all styling
 - Tailwind v4: CSS-first config (`@theme` in `globals.css`), no `tailwind.config.js`
+- Tailwind CSS v4 must be processed via `@tailwindcss/postcss` in `postcss.config.mjs` so both dev and production static export builds compile all utilities. Packaging scripts enforce `.bg-primary` presence.
 - Use shadcn/ui components where applicable
 - No inline styles
 - Dark mode first, light mode as option

@@ -73,13 +73,8 @@ for (const file of cssFiles) {
   const size = fs.statSync(file).size;
   totalCssBytes += size;
 
-  // Check for Tailwind v4 compiled utilities or custom theme classes
-  if (
-    content.includes(".bg-primary") ||
-    content.includes("bg-primary") ||
-    content.includes("--color-primary") ||
-    content.includes(".flex")
-  ) {
+  // Check for Tailwind v4 compiled utilities
+  if (content.includes(".bg-primary") && content.includes(".text-accent")) {
     hasTailwindUtilities = true;
   }
 }
@@ -92,10 +87,10 @@ console.log(
 if (totalCssBytes < 15000 || !hasTailwindUtilities) {
   console.error("\n❌ FATAL QUALITY GATE FAILURE:");
   console.error(
-    "The compiled CSS file appears incomplete or missing Tailwind utility classes!",
+    "The compiled CSS file appears incomplete or missing Tailwind utility classes (.bg-primary, .text-accent)!",
   );
   console.error(
-    "Ensure that 'next build' is running with Turbopack and '@tailwindcss/turbopack' is active.",
+    "Ensure PostCSS is configured with '@tailwindcss/postcss' and build is clean.",
   );
   process.exit(1);
 }
