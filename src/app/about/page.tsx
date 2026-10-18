@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { firmConfig } from "@/config/firm";
 
@@ -125,27 +126,51 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Right: Chambers Credo Callout */}
-            <div className="lg:col-span-5 bg-background border border-border border-l-4 border-l-accent p-8 rounded-sm">
-              <div className="text-xs uppercase tracking-widest text-accent font-semibold mb-3">
-                Chambers Credo
-              </div>
-              <blockquote className="font-serif italic text-lg sm:text-xl text-primary leading-relaxed mb-6">
-                &ldquo;Precision in the brief, absolute candor before the Bench,
-                and unwavering independence in counsel.&rdquo;
-              </blockquote>
-              <div className="pt-4 border-t border-border-subtle space-y-3 text-xs text-foreground-muted">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                  <span>Solemn fidelity to the Constitution of India</span>
+            {/* Right: Chambers Law Library Image & Credo Callout */}
+            <div className="lg:col-span-5 space-y-6">
+              {firmConfig.aboutImage && (
+                <div className="relative aspect-[16/10] w-full rounded-sm overflow-hidden border border-border shadow-md group">
+                  <Image
+                    src={firmConfig.aboutImage}
+                    alt="Chambers Law Library & Research Archive"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 450px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/85 via-primary-dark/20 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
+                    <span className="font-serif italic text-accent tracking-wide">
+                      Chambers Law Library &amp; Research Archive
+                    </span>
+                    <span className="text-[10px] font-mono tracking-widest text-slate-300 uppercase px-2 py-0.5 rounded-xs bg-primary/80 border border-white/10">
+                      Chamber 402
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                  <span>Strict adherence to BCI professional ethics</span>
+              )}
+
+              {/* Chambers Credo Callout */}
+              <div className="bg-background border border-border border-l-4 border-l-accent p-8 rounded-sm shadow-xs">
+                <div className="text-xs uppercase tracking-widest text-accent font-semibold mb-3">
+                  Chambers Credo
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                  <span>Non-partisan fiduciary commitment to clients</span>
+                <blockquote className="font-serif italic text-lg sm:text-xl text-primary leading-relaxed mb-6">
+                  &ldquo;Precision in the brief, absolute candor before the
+                  Bench, and unwavering independence in counsel.&rdquo;
+                </blockquote>
+                <div className="pt-4 border-t border-border-subtle space-y-3 text-xs text-foreground-muted">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>Solemn fidelity to the Constitution of India</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>Strict adherence to BCI professional ethics</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                    <span>Non-partisan fiduciary commitment to clients</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -178,7 +203,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-border p-8 rounded-sm">
+            <div className="bg-surface border border-border p-8 rounded-sm hover:border-accent/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                 <FileCheck className="w-5 h-5" />
               </div>
@@ -194,7 +219,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-8 rounded-sm">
+            <div className="bg-surface border border-border p-8 rounded-sm hover:border-accent/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                 <Landmark className="w-5 h-5" />
               </div>
@@ -209,7 +234,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-8 rounded-sm">
+            <div className="bg-surface border border-border p-8 rounded-sm hover:border-accent/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -225,7 +250,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-8 rounded-sm">
+            <div className="bg-surface border border-border p-8 rounded-sm hover:border-accent/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                 <Briefcase className="w-5 h-5" />
               </div>

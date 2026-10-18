@@ -40,8 +40,28 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section
         aria-labelledby="hero-heading"
-        className="relative bg-primary-dark text-white border-b border-primary-light/50 overflow-hidden"
+        className="relative bg-primary-dark text-white border-b border-primary-light/50 overflow-hidden min-h-[600px] flex items-center"
       >
+        {/* Atmospheric Judicial Architecture Backdrop */}
+        {firmConfig.heroImage && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 select-none pointer-events-none"
+          >
+            <Image
+              src={firmConfig.heroImage}
+              alt="Judicial Architecture"
+              fill
+              priority
+              className="object-cover object-center opacity-25 mix-blend-luminosity scale-105"
+              sizes="100vw"
+            />
+            {/* Multi-layered directional dark gradient overlays to guarantee perfect text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/95 to-primary-dark/75" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-transparent to-primary-dark/50" />
+          </div>
+        )}
+
         {/* Subtle background ornamentation */}
         <div
           aria-hidden="true"
@@ -49,21 +69,21 @@ export default function Home() {
         />
         <div
           aria-hidden="true"
-          className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"
+          className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
           <div className="max-w-3xl">
             {/* Regulatory badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary border border-accent/30 text-accent text-xs font-medium tracking-wider uppercase mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/90 backdrop-blur-xs border border-accent/40 text-accent text-xs font-medium tracking-wider uppercase mb-6 shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span>Advocates & Legal Consultants • New Delhi</span>
             </div>
 
             {/* Chamber Name & Motto */}
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-[1.15] mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-[1.15] mb-6 drop-shadow-xs"
             >
               {firmConfig.name}
               <span className="block text-2xl sm:text-3xl lg:text-4xl font-normal text-accent italic mt-2">
@@ -72,7 +92,7 @@ export default function Home() {
             </h1>
 
             {/* Factual Institutional Summary */}
-            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-sans mb-10 max-w-2xl">
+            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed font-sans mb-10 max-w-2xl font-light">
               {firmConfig.shortDescription}
             </p>
 
@@ -80,20 +100,20 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="/practice-areas"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent-hover text-primary font-medium text-sm rounded-sm transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent-hover text-primary font-medium text-sm rounded-sm transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 <span>Practice Disciplines</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-light/80 hover:bg-primary-light text-white border border-slate-700 font-medium text-sm rounded-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary/80 hover:bg-primary text-white border border-slate-600 hover:border-accent/40 font-medium text-sm rounded-sm transition-all backdrop-blur-xs"
               >
                 <span>Chambers Profile</span>
               </Link>
               <Link
                 href="/team"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-slate-300 hover:text-white hover:bg-white/5 font-medium text-sm rounded-sm transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-slate-300 hover:text-white hover:bg-white/10 font-medium text-sm rounded-sm transition-all"
               >
                 <span>Advocates Directory</span>
               </Link>
@@ -101,36 +121,36 @@ export default function Home() {
           </div>
 
           {/* Factual Institutional Metrics Bar */}
-          <div className="mt-16 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-300">
+          <div className="mt-16 pt-8 border-t border-slate-700/60 grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-300 bg-primary/40 backdrop-blur-sm p-6 rounded-sm border border-accent/20 shadow-lg">
             <div>
-              <div className="text-2xl font-serif font-bold text-accent">
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-accent">
                 {firmConfig.establishedYear}
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              <div className="text-xs uppercase tracking-wider text-slate-300 mt-1">
                 Established Year
               </div>
             </div>
             <div>
-              <div className="text-2xl font-serif font-bold text-accent">
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-accent">
                 {practiceAreas.length} Disciplines
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              <div className="text-xs uppercase tracking-wider text-slate-300 mt-1">
                 Litigation & Advisory
               </div>
             </div>
             <div>
-              <div className="text-2xl font-serif font-bold text-accent">
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-accent">
                 Supreme Court
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              <div className="text-xs uppercase tracking-wider text-slate-300 mt-1">
                 & Delhi High Court
               </div>
             </div>
             <div>
-              <div className="text-2xl font-serif font-bold text-accent">
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-accent">
                 Rule 36
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              <div className="text-xs uppercase tracking-wider text-slate-300 mt-1">
                 BCI Ethical Standard
               </div>
             </div>
@@ -165,7 +185,7 @@ export default function Home() {
             {firmConfig.corePrinciples.map((principle, index) => (
               <div
                 key={principle.title}
-                className="relative bg-background border border-border border-t-2 border-t-accent p-8 rounded-sm hover:border-slate-300 transition-colors"
+                className="relative bg-background border border-border border-t-2 border-t-accent p-8 rounded-sm hover:border-slate-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="text-xs font-serif font-bold text-accent/80 tracking-widest uppercase mb-4">
                   0{index + 1} • ETHOS
@@ -221,45 +241,71 @@ export default function Home() {
               return (
                 <div
                   key={area.id}
-                  className="group bg-surface border border-border p-6 rounded-sm hover:border-accent/60 transition-all hover:shadow-sm flex flex-col justify-between"
+                  className="group bg-surface border border-border rounded-sm hover:border-accent/80 transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden"
                 >
-                  <div>
-                    <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-primary transition-colors">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <h3 className="text-xl font-serif font-bold text-primary mb-2.5">
-                      {area.title}
-                    </h3>
-                    <p className="text-foreground-muted text-sm leading-relaxed mb-6">
-                      {area.shortDescription}
-                    </p>
-                  </div>
-
-                  <div>
-                    {/* Common Courts Badges */}
-                    <div className="pt-4 border-t border-border-subtle mb-4">
-                      <div className="text-[11px] uppercase tracking-wider text-foreground-subtle font-medium mb-2">
-                        Common Appearance Forums:
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {area.courts.slice(0, 2).map((court) => (
-                          <span
-                            key={court}
-                            className="inline-block text-[11px] px-2 py-0.5 bg-surface-subtle border border-border text-foreground-muted rounded-xs"
-                          >
-                            {court}
-                          </span>
-                        ))}
+                  {/* Discipline Photography Banner */}
+                  {area.image && (
+                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-primary-dark">
+                      <Image
+                        src={area.image}
+                        alt={area.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-90"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/30 to-transparent" />
+                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                        <div className="w-8 h-8 rounded-xs bg-primary/90 backdrop-blur-xs border border-accent/40 text-accent flex items-center justify-center shadow-xs">
+                          <IconComponent className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono tracking-widest text-white/90 uppercase px-2 py-0.5 rounded-xs bg-primary-dark/80 backdrop-blur-xs border border-white/10">
+                          Discipline
+                        </span>
                       </div>
                     </div>
+                  )}
 
-                    <Link
-                      href="/practice-areas"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-hover tracking-wider uppercase transition-colors"
-                    >
-                      <span>Explore Discipline Details</span>
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </Link>
+                  <div className="p-6 flex flex-col justify-between flex-1">
+                    <div>
+                      {!area.image && (
+                        <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-primary transition-colors">
+                          <IconComponent className="w-5 h-5" />
+                        </div>
+                      )}
+                      <h3 className="text-xl font-serif font-bold text-primary mb-2.5 group-hover:text-accent-hover transition-colors">
+                        {area.title}
+                      </h3>
+                      <p className="text-foreground-muted text-sm leading-relaxed mb-6">
+                        {area.shortDescription}
+                      </p>
+                    </div>
+
+                    <div>
+                      {/* Common Courts Badges */}
+                      <div className="pt-4 border-t border-border-subtle mb-4">
+                        <div className="text-[11px] uppercase tracking-wider text-foreground-subtle font-medium mb-2">
+                          Common Appearance Forums:
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {area.courts.slice(0, 2).map((court) => (
+                            <span
+                              key={court}
+                              className="inline-block text-[11px] px-2 py-0.5 bg-surface-subtle border border-border text-foreground-muted rounded-xs"
+                            >
+                              {court}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Link
+                        href={`/practice-areas/${area.slug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-hover tracking-wider uppercase transition-colors"
+                      >
+                        <span>Explore Discipline Details</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );

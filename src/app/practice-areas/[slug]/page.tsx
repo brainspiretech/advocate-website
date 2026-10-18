@@ -12,6 +12,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PracticeAreaIcon } from "@/components/practice-areas/PracticeAreaIcon";
@@ -164,6 +165,29 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* LEFT: PRIMARY DOSSIER (8 COLUMNS) */}
             <div className="lg:col-span-8 space-y-12">
+              {/* Discipline Photographic Banner */}
+              {area.image && (
+                <div className="relative aspect-[21/9] sm:aspect-[24/9] w-full overflow-hidden rounded-sm border border-border shadow-md">
+                  <Image
+                    src={area.image}
+                    alt={area.title}
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 850px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/85 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
+                    <span className="font-serif italic text-accent tracking-wide">
+                      {area.title} • Jurisprudential Scope
+                    </span>
+                    <span className="text-[10px] font-mono tracking-widest text-slate-300 uppercase px-2 py-0.5 rounded-xs bg-primary-dark/80 backdrop-blur-xs border border-white/10">
+                      Discipline Dossier
+                    </span>
+                  </div>
+                </div>
+              )}
+
               {/* Detailed Overview */}
               <div>
                 <div className="inline-flex items-center gap-1.5 text-accent text-xs font-semibold tracking-wider uppercase mb-2">
@@ -287,25 +311,38 @@ export default async function PracticeAreaDetailPage({ params }: PageProps) {
                   {relevantAdvocates.map((adv: AdvocateProfile) => (
                     <div
                       key={adv.id}
-                      className="p-3.5 rounded-sm bg-background border border-border hover:border-accent/60 transition-colors"
+                      className="p-3.5 rounded-sm bg-background border border-border hover:border-accent/80 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 flex gap-3.5 items-start"
                     >
-                      <div className="font-serif font-bold text-sm text-primary">
-                        {adv.name}
+                      {adv.image && (
+                        <div className="relative w-12 h-14 rounded-xs overflow-hidden shrink-0 border border-border bg-primary-dark">
+                          <Image
+                            src={adv.image}
+                            alt={adv.name}
+                            fill
+                            className="object-cover"
+                            sizes="48px"
+                          />
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div className="font-serif font-bold text-sm text-primary">
+                          {adv.name}
+                        </div>
+                        <div className="text-xs text-accent font-medium mb-1">
+                          {adv.designation}
+                        </div>
+                        <div className="text-[11px] text-foreground-muted flex items-start gap-1.5 mb-2">
+                          <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+                          <span className="truncate">{adv.barEnrollment}</span>
+                        </div>
+                        <Link
+                          href={`/team/${adv.slug}`}
+                          className="text-[11px] font-semibold text-primary hover:text-accent inline-flex items-center gap-1 uppercase tracking-wider transition-colors"
+                        >
+                          <span>View Profile</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
                       </div>
-                      <div className="text-xs text-accent font-medium mb-1.5">
-                        {adv.designation}
-                      </div>
-                      <div className="text-[11px] text-foreground-muted flex items-start gap-1.5 mb-2">
-                        <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
-                        <span>{adv.barEnrollment}</span>
-                      </div>
-                      <Link
-                        href={`/team#${adv.slug}`}
-                        className="text-[11px] font-semibold text-primary hover:text-accent inline-flex items-center gap-1 uppercase tracking-wider"
-                      >
-                        <span>View Credentials</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
                     </div>
                   ))}
                 </div>

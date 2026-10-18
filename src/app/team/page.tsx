@@ -111,7 +111,7 @@ export default function TeamPage() {
               <article
                 key={adv.id}
                 id={adv.slug}
-                className="group flex flex-col justify-between bg-surface border border-border hover:border-accent/80 transition-all rounded-sm p-8 shadow-xs scroll-mt-24"
+                className="group flex flex-col justify-between bg-surface border border-border hover:border-accent/80 transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 rounded-sm p-8 shadow-xs scroll-mt-24"
               >
                 <div>
                   {/* Advocate Portrait Card */}

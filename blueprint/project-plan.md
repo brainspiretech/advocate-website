@@ -21,6 +21,7 @@ Indian legal practitioners are prohibited under the Advocates Act, 1961 from adv
 - **Dedicated Standalone Disclaimer (`/disclaimer`):** Permanent reference page detailing BCI terms and conditions.
 - **Curated Legal Photographic Assets & Advocate Portraits:** High-resolution, royalty-free imagery downloaded locally to `/public/images/` (advocate portraits in formal court attire replacing monogram avatars, legal library, and neoclassical architecture).
 - **Atmospheric Hero & Rich Editorial Surfaces:** Architectural backdrop with gradient lighting for the hero section, image headers for practice disciplines, and polished micro-interactions.
+- **Heritage Color Palette Theme Switcher & Bespoke Law Library Hero:** Interactive client-side theme switcher in the header allowing visitors to toggle between three curated legal heritage palettes (Imperial Navy & Brass, Oxford Burgundy & Amber, and Heritage Forest Green & Bronze) with persistent `localStorage` preference, and a rich dark mahogany legal library hero backdrop.
 - **Static HTML Export Support:** Fully static output via `output: 'export'` generating a self-contained `out/` bundle and cPanel deployment zip.
 
 ### Explicit Non-Goals / Deferred for Later Milestones:

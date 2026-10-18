@@ -105,7 +105,7 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Address Card */}
-            <div className="bg-surface border border-border p-6 rounded-sm flex flex-col justify-between">
+            <div className="bg-surface border border-border hover:border-accent/60 transition-all duration-300 hover:shadow-md hover:-translate-y-1 p-6 rounded-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                   <MapPin className="w-5 h-5" />
@@ -132,7 +132,7 @@ export default function ContactPage() {
             </div>
 
             {/* Telephone Card */}
-            <div className="bg-surface border border-border p-6 rounded-sm flex flex-col justify-between">
+            <div className="bg-surface border border-border hover:border-accent/60 transition-all duration-300 hover:shadow-md hover:-translate-y-1 p-6 rounded-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                   <Phone className="w-5 h-5" />
@@ -160,7 +160,7 @@ export default function ContactPage() {
             </div>
 
             {/* Electronic Mail Card */}
-            <div className="bg-surface border border-border p-6 rounded-sm flex flex-col justify-between">
+            <div className="bg-surface border border-border hover:border-accent/60 transition-all duration-300 hover:shadow-md hover:-translate-y-1 p-6 rounded-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                   <Mail className="w-5 h-5" />
@@ -187,7 +187,7 @@ export default function ContactPage() {
             </div>
 
             {/* Operating Hours Card */}
-            <div className="bg-surface border border-border p-6 rounded-sm flex flex-col justify-between">
+            <div className="bg-surface border border-border hover:border-accent/60 transition-all duration-300 hover:shadow-md hover:-translate-y-1 p-6 rounded-sm flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center mb-5">
                   <Clock className="w-5 h-5" />

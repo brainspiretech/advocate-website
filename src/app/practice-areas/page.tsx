@@ -8,6 +8,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PracticeAreaIcon } from "@/components/practice-areas/PracticeAreaIcon";
 import { firmConfig, practiceAreas } from "@/config/firm";
@@ -76,7 +77,7 @@ export default function PracticeAreasPage() {
       {/* 2. DISCIPLINE FAST-NAV */}
       <section
         aria-label="Practice areas quick links"
-        className="py-4 bg-surface border-b border-border text-xs text-foreground-muted"
+        className="py-4 bg-surface border-b border-border text-xs text-foreground-muted sticky top-16 z-20 backdrop-blur-md bg-surface/90"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
@@ -125,22 +126,49 @@ export default function PracticeAreasPage() {
               <article
                 key={area.id}
                 id={area.slug}
-                className="group flex flex-col justify-between bg-surface border border-border hover:border-accent/80 transition-all rounded-sm p-8 shadow-xs scroll-mt-24"
+                className="group flex flex-col justify-between bg-surface border border-border hover:border-accent/80 transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 rounded-sm p-6 sm:p-8 shadow-xs scroll-mt-32 overflow-hidden"
               >
                 <div>
-                  <div className="flex items-start justify-between gap-4 mb-5">
-                    <div className="w-12 h-12 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center shrink-0">
-                      <PracticeAreaIcon
-                        name={area.iconName}
-                        className="w-6 h-6"
+                  {/* Visual Photography Card */}
+                  {area.image && (
+                    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xs mb-6 border border-border group-hover:border-accent/40 transition-colors bg-primary-dark">
+                      <Image
+                        src={area.image}
+                        alt={area.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-95"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/85 via-primary-dark/25 to-transparent" />
+                      <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                        <div className="w-9 h-9 rounded-xs bg-primary/90 backdrop-blur-xs border border-accent/40 text-accent flex items-center justify-center shadow-xs">
+                          <PracticeAreaIcon
+                            name={area.iconName}
+                            className="w-4 h-4"
+                          />
+                        </div>
+                        <span className="text-[10px] font-mono tracking-widest text-white/90 uppercase px-2.5 py-0.5 rounded-xs bg-primary-dark/80 backdrop-blur-xs border border-white/10">
+                          Discipline
+                        </span>
+                      </div>
                     </div>
-                    <span className="text-[11px] font-mono tracking-widest text-accent/80 uppercase px-2 py-0.5 rounded-sm bg-background border border-border">
-                      Discipline
-                    </span>
-                  </div>
+                  )}
 
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary group-hover:text-primary-light transition-colors mb-3">
+                  {!area.image && (
+                    <div className="flex items-start justify-between gap-4 mb-5">
+                      <div className="w-12 h-12 rounded-sm bg-accent/10 border border-accent/20 text-accent flex items-center justify-center shrink-0">
+                        <PracticeAreaIcon
+                          name={area.iconName}
+                          className="w-6 h-6"
+                        />
+                      </div>
+                      <span className="text-[11px] font-mono tracking-widest text-accent/80 uppercase px-2 py-0.5 rounded-sm bg-background border border-border">
+                        Discipline
+                      </span>
+                    </div>
+                  )}
+
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary group-hover:text-accent-hover transition-colors mb-3">
                     <Link
                       href={`/practice-areas/${area.slug}`}
                       className="hover:underline"
