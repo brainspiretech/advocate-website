@@ -11,3 +11,7 @@
 - [x] 6. **Practice Areas Index & Static Detail Views** - Build `/practice-areas` catalog and dynamic `/practice-areas/[slug]` pages pre-rendered via `generateStaticParams()` for in-depth, factual descriptions of each legal domain.
 - [x] 7. **Advocates & Leadership Directory** - Build `/team` and `/team/[slug]` pre-rendered via `generateStaticParams()` showcasing advocate qualifications, bar admissions, areas of expertise, and professional backgrounds.
 - [x] 8. **Contact & Chambers Location Page** - Build `/contact` with direct contact cards (phone, email, hours), court proximity information, and an interactive location map embed.
+
+## Milestone 3: Visual Identity & Editorial UX Elevation
+- [x] 9. **Curated Legal Photographic Assets & Advocate Portrait Integration** - Curate and download high-resolution, royalty-free legal imagery into `/public/images/` (courtroom architecture, chambers library, and professional advocate portraits for all three counsels), update `src/config/firm.ts` with image references, and integrate authentic advocate photography into `/team`, `/team/[slug]`, and homepage leadership teasers.
+- [ ] 10. **Atmospheric Hero Redesign & Rich Editorial Surface Polish** - Elevate the homepage hero with an atmospheric neoclassical judicial backdrop and gradient overlay, enrich `/about` with classical chambers library imagery, add visual discipline cards to `/practice-areas`, and refine card hover elevations and micro-interactions across the site.

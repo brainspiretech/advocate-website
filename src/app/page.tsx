@@ -15,6 +15,7 @@ import {
   ShieldAlert,
   ShieldCheck,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   advocates,
@@ -303,17 +304,31 @@ export default function Home() {
             {advocates.map((advocate) => (
               <div
                 key={advocate.id}
-                className="bg-background border border-border rounded-sm p-6 flex flex-col justify-between"
+                className="group bg-background border border-border hover:border-accent/80 transition-all rounded-sm p-6 flex flex-col justify-between shadow-xs"
               >
                 <div>
-                  {/* Name and Designation */}
-                  <div className="w-12 h-12 rounded-sm bg-primary text-accent font-serif font-bold text-lg flex items-center justify-center mb-4">
-                    {advocate.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
+                  {/* Portrait photo */}
+                  <div className="relative w-full aspect-[4/5] rounded-xs overflow-hidden mb-5 bg-slate-900 border border-border group-hover:border-accent/60 transition-all shadow-xs">
+                    {advocate.image ? (
+                      <Image
+                        src={advocate.image}
+                        alt={advocate.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-primary text-accent font-serif text-3xl font-bold">
+                        {advocate.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                   </div>
-                  <h3 className="text-xl font-serif font-bold text-primary">
+
+                  <h3 className="text-xl font-serif font-bold text-primary group-hover:text-primary-light transition-colors">
                     {advocate.name}
                   </h3>
                   <div className="text-xs font-medium text-accent mt-0.5 mb-3">

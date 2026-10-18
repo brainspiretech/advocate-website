@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { advocates, firmConfig } from "@/config/firm";
 
@@ -113,24 +114,41 @@ export default function TeamPage() {
                 className="group flex flex-col justify-between bg-surface border border-border hover:border-accent/80 transition-all rounded-sm p-8 shadow-xs scroll-mt-24"
               >
                 <div>
-                  {/* Monogram / Header Avatar */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-full bg-primary border-2 border-accent/40 text-accent flex items-center justify-center font-serif text-lg font-bold tracking-wider shrink-0 shadow-xs">
-                      {getInitials(adv.name)}
+                  {/* Advocate Portrait Card */}
+                  <div className="relative w-full aspect-[4/5] rounded-xs overflow-hidden mb-6 bg-slate-900 border border-border group-hover:border-accent/60 transition-all shadow-xs">
+                    {adv.image ? (
+                      <Image
+                        src={adv.image}
+                        alt={adv.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-primary text-accent font-serif text-3xl font-bold">
+                        {getInitials(adv.name)}
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-white">
+                      <span className="px-2 py-0.5 rounded-xs bg-primary-dark/80 backdrop-blur-xs border border-accent/40 font-mono text-[10px] text-accent">
+                        Apex Counsel
+                      </span>
                     </div>
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary group-hover:text-primary-light transition-colors">
-                        <Link
-                          href={`/team/${adv.slug}`}
-                          className="hover:underline"
-                        >
-                          {adv.name}
-                        </Link>
-                      </h3>
-                      <p className="text-xs text-accent font-medium mt-0.5">
-                        {adv.designation}
-                      </p>
-                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary group-hover:text-primary-light transition-colors">
+                      <Link
+                        href={`/team/${adv.slug}`}
+                        className="hover:underline"
+                      >
+                        {adv.name}
+                      </Link>
+                    </h3>
+                    <p className="text-xs text-accent font-medium mt-0.5">
+                      {adv.designation}
+                    </p>
                   </div>
 
                   {/* Official Bar Enrollment */}

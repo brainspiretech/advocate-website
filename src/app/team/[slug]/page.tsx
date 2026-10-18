@@ -10,6 +10,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -137,8 +138,21 @@ export default async function AdvocateProfilePage({ params }: PageProps) {
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-              <div className="w-20 h-20 rounded-full bg-primary border-2 border-accent text-accent flex items-center justify-center font-serif text-2xl font-bold tracking-wider shrink-0 shadow-md">
-                {getInitials(advocate.name)}
+              <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-xs overflow-hidden bg-primary border-2 border-accent/60 shadow-lg shrink-0">
+                {advocate.image ? (
+                  <Image
+                    src={advocate.image}
+                    alt={advocate.name}
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 112px, 128px"
+                    className="object-cover object-top"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center font-serif text-3xl font-bold text-accent">
+                    {getInitials(advocate.name)}
+                  </div>
+                )}
               </div>
               <div>
                 <h1

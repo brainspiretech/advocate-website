@@ -26,6 +26,7 @@ export interface PracticeArea {
     | "ShieldAlert"
     | "Briefcase"
     | "Landmark";
+  image?: string;
 }
 
 export interface AdvocateProfile {
@@ -63,6 +64,8 @@ export interface FirmConfig {
     ruleReference: string;
     noticeVersion: string;
   };
+  heroImage?: string;
+  aboutImage?: string;
 }
 
 export const firmConfig: FirmConfig = {
@@ -120,6 +123,8 @@ export const firmConfig: FirmConfig = {
       "Rule 36, Section IV, Chapter II, Part VI of the Bar Council of India Rules",
     noticeVersion: "2026.1",
   },
+  heroImage: "/images/hero/court-columns.jpg",
+  aboutImage: "/images/chambers/library.jpg",
 };
 
 export const practiceAreas: PracticeArea[] = [
@@ -145,6 +150,7 @@ export const practiceAreas: PracticeArea[] = [
       "Indian Council of Arbitration (ICA)",
     ],
     iconName: "Scale",
+    image: "/images/practice/commercial-disputes-arbitration.jpg",
   },
   {
     id: "corporate-insolvency-ibc",
@@ -167,6 +173,7 @@ export const practiceAreas: PracticeArea[] = [
       "Debts Recovery Tribunal (DRT, Delhi)",
     ],
     iconName: "Building2",
+    image: "/images/practice/corporate-insolvency-ibc.jpg",
   },
   {
     id: "white-collar-crime-defense",
@@ -190,6 +197,7 @@ export const practiceAreas: PracticeArea[] = [
       "Appellate Tribunal for PMLA (ATFP)",
     ],
     iconName: "ShieldAlert",
+    image: "/images/practice/white-collar-crime-defense.jpg",
   },
   {
     id: "constitutional-administrative-law",
@@ -212,6 +220,7 @@ export const practiceAreas: PracticeArea[] = [
       "Central Administrative Tribunal (Principal Bench, New Delhi)",
     ],
     iconName: "Landmark",
+    image: "/images/practice/constitutional-administrative-law.jpg",
   },
   {
     id: "real-estate-rera-property",
@@ -234,6 +243,7 @@ export const practiceAreas: PracticeArea[] = [
       "High Court of Delhi",
     ],
     iconName: "Briefcase",
+    image: "/images/practice/real-estate-rera-property.jpg",
   },
   {
     id: "intellectual-property-technology",
@@ -256,6 +266,7 @@ export const practiceAreas: PracticeArea[] = [
       "District Commercial Courts",
     ],
     iconName: "FileText",
+    image: "/images/practice/intellectual-property-technology.jpg",
   },
 ];
 
@@ -282,6 +293,7 @@ export const advocates: AdvocateProfile[] = [
     ],
     biography:
       "With over two decades of trial and appellate experience, Rajesh Narayan leads the chambers' commercial dispute and constitutional law practices. He has argued extensively before the Supreme Court of India, multiple State High Courts, and Arbitral Tribunals in high-value infrastructure, corporate, and constitutional matters. Prior to founding Apex Chambers, he trained with senior advocates at the Supreme Court of India.",
+    image: "/images/advocates/rajesh-narayan.jpg",
   },
   {
     id: "meenakshi-swaminathan",
@@ -305,6 +317,7 @@ export const advocates: AdvocateProfile[] = [
     ],
     biography:
       "Meenakshi Swaminathan oversees the chambers' corporate restructuring and insolvency advisory. She regularly appears before the Principal and Regional Benches of the NCLT and NCLAT on behalf of institutional creditors and resolution applicants. She brings significant domain expertise in navigating stressed asset acquisitions and complex shareholder agreements.",
+    image: "/images/advocates/meenakshi-swaminathan.jpg",
   },
   {
     id: "anand-vardhan-singh",
@@ -329,5 +342,6 @@ export const advocates: AdvocateProfile[] = [
     ],
     biography:
       "Anand Vardhan Singh focuses on corporate penal liability, economic offences, and complex trials under special statutes. He has successfully represented corporate directors and professionals in investigations conducted by statutory enforcement agencies. His advocacy pairs aggressive trial strategy with deep procedural expertise in statutory criminal jurisprudence.",
+    image: "/images/advocates/anand-vardhan-singh.jpg",
   },
 ];
