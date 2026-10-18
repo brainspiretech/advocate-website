@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
-:root {
-  /* Brand Palette - Deep Regal Navy & Warm Slate */
+:root,
+:root[data-theme="navy"],
+[data-theme="navy"] {
+  /* Brand Palette 1: Imperial Navy & Warm Brass (Default) */
   --primary: #0b192c;
   --primary-light: #182b45;
   --primary-dark: #060e19;
@@ -28,6 +30,68 @@
   --border: #e2e6ed;
   --border-subtle: #eceff4;
   --border-focus: #c5a880;
+}
+
+:root[data-theme="burgundy"],
+[data-theme="burgundy"] {
+  /* Brand Palette 2: Oxford Burgundy & Warm Amber */
+  --primary: #2a1217;
+  --primary-light: #3d1d23;
+  --primary-dark: #18080c;
+  --primary-foreground: #ffffff;
+
+  /* Accent - Warm Amber Gold */
+  --accent: #d4a373;
+  --accent-hover: #c4915f;
+  --accent-light: #f9f2ea;
+  --accent-foreground: #2a1217;
+
+  /* Surfaces & Backgrounds */
+  --background: #fcfbfb;
+  --surface: #ffffff;
+  --surface-subtle: #f8f4f5;
+  --surface-muted: #f2ebec;
+
+  /* Text & Content */
+  --foreground: #201416;
+  --foreground-muted: #6b5559;
+  --foreground-subtle: #8a7377;
+
+  /* Borders & Dividers */
+  --border: #ede4e5;
+  --border-subtle: #f4eeef;
+  --border-focus: #d4a373;
+}
+
+:root[data-theme="green"],
+[data-theme="green"] {
+  /* Brand Palette 3: Collegiate Forest Green & Antique Bronze */
+  --primary: #12261b;
+  --primary-light: #1d3b2a;
+  --primary-dark: #0a1710;
+  --primary-foreground: #ffffff;
+
+  /* Accent - Antique Bronze Brass */
+  --accent: #c29b63;
+  --accent-hover: #af8850;
+  --accent-light: #f4efe6;
+  --accent-foreground: #12261b;
+
+  /* Surfaces & Backgrounds */
+  --background: #fbfcfb;
+  --surface: #ffffff;
+  --surface-subtle: #f3f6f4;
+  --surface-muted: #eaf0ec;
+
+  /* Text & Content */
+  --foreground: #142018;
+  --foreground-muted: #536459;
+  --foreground-subtle: #7a8c80;
+
+  /* Borders & Dividers */
+  --border: #e1e8e3;
+  --border-subtle: #ecf0ed;
+  --border-focus: #c29b63;
 }
 
 @theme inline {

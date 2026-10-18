@@ -4,6 +4,7 @@ import { Menu, Phone, Scale, ShieldCheck, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { ThemeSwitcher } from "@/components/theme/ThemeSwitcher";
 import { firmConfig } from "@/config/firm";
 
 const navItems = [
@@ -92,8 +93,9 @@ export function Navbar() {
               })}
             </nav>
 
-            {/* Right Action / Contact Button */}
-            <div className="hidden lg:flex items-center gap-3">
+            {/* Right Action: Theme Switcher & Contact Button */}
+            <div className="hidden md:flex items-center gap-3">
+              <ThemeSwitcher />
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary hover:text-accent-foreground bg-surface border border-accent/40 hover:bg-accent hover:border-accent transition-all rounded-sm shadow-sm"
@@ -103,8 +105,9 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <div className="flex md:hidden">
+            {/* Mobile Hamburger & Quick Switcher */}
+            <div className="flex items-center gap-2 md:hidden">
+              <ThemeSwitcher compact />
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -179,6 +182,14 @@ export function Navbar() {
                   );
                 })}
               </nav>
+
+              {/* Palette Selection inside Drawer */}
+              <div className="mt-6 pt-6 border-t border-border">
+                <p className="font-semibold text-accent uppercase tracking-wider text-[10px] mb-2 font-mono">
+                  Heritage Theme Palette
+                </p>
+                <ThemeSwitcher compact />
+              </div>
             </div>
 
             {/* Drawer Footer Information */}

@@ -1,6 +1,6 @@
 # advocate-website - Project Overview
 
-<!-- blueprint:source-hash fdf66e4e47c15f266c8dc78e97654a22ecdb3dd1e2b593f95d513e92c1d9c193 -->
+<!-- blueprint:source-hash f533c54c0e54cdcfe157e17a206519c55dc891dea5ce794609e4a6e4094c66f6 -->
 
 > Dignified, authoritative Indian law firm website engineered for strict compliance with Rule 36 of the Bar Council of India (BCI) Rules, modeled on leading chambers like ILA Chambers, and output as pure static HTML.
 

@@ -123,7 +123,7 @@ export const firmConfig: FirmConfig = {
       "Rule 36, Section IV, Chapter II, Part VI of the Bar Council of India Rules",
     noticeVersion: "2026.1",
   },
-  heroImage: "/images/hero/court-columns.jpg",
+  heroImage: "/images/hero/mahogany-library.jpg",
   aboutImage: "/images/chambers/library.jpg",
 };
 

@@ -38,7 +38,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${lora.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Static inline script required for zero-flicker theme restoration
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("apex_theme");if(t&&("navy"===t||"burgundy"===t||"green"===t)){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent/20 selection:text-primary">
         <DisclaimerModal />
         <Navbar />
