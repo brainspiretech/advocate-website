@@ -8,6 +8,6 @@
 ## Milestone 2: Core Firm Experiences & Static Generation
 - [x] 4. **Homepage & Institutional Ethos** - Implement the primary landing page featuring an authoritative hero section, core values, practice highlights, leadership introduction, and office jurisdiction.
 - [x] 5. **About Firm Page** - Build `/about` detailing the chamber's founding philosophy, litigation and advisory standards, jurisdictions (Supreme Court, High Courts, Tribunals), and institutional principles.
-- [ ] 6. **Practice Areas Index & Static Detail Views** - Build `/practice-areas` catalog and dynamic `/practice-areas/[slug]` pages pre-rendered via `generateStaticParams()` for in-depth, factual descriptions of each legal domain.
+- [x] 6. **Practice Areas Index & Static Detail Views** - Build `/practice-areas` catalog and dynamic `/practice-areas/[slug]` pages pre-rendered via `generateStaticParams()` for in-depth, factual descriptions of each legal domain.
 - [ ] 7. **Advocates & Leadership Directory** - Build `/team` and `/team/[slug]` pre-rendered via `generateStaticParams()` showcasing advocate qualifications, bar admissions, areas of expertise, and professional backgrounds.
 - [ ] 8. **Contact & Chambers Location Page** - Build `/contact` with direct contact cards (phone, email, hours), court proximity information, and an interactive location map embed.
