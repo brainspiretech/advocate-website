@@ -1,6 +1,6 @@
 # advocate-website - Project Overview
 
-<!-- blueprint:source-hash 7b7cf253a491ba25fec939a2bf3a57b2bd49c6857deda2c72f04a19f0133d84c -->
+<!-- blueprint:source-hash fdf66e4e47c15f266c8dc78e97654a22ecdb3dd1e2b593f95d513e92c1d9c193 -->
 
 > Dignified, authoritative Indian law firm website engineered for strict compliance with Rule 36 of the Bar Council of India (BCI) Rules, modeled on leading chambers like ILA Chambers, and output as pure static HTML.
 
@@ -33,6 +33,7 @@ Under the Advocates Act, 1961 and Bar Council of India rules, advocates in India
 8. **Contact & Chambers Location Page (`/contact`)** - Direct contact cards (phones, official emails, operating hours), court proximity information, and interactive location map embed.
 9. **Curated Legal Photographic Assets & Advocate Portraits** - Download royalty-free legal photography to `public/images/` and integrate authentic advocate portraits for all three partners across `/team`, `/team/[slug]`, and homepage.
 10. **Atmospheric Hero Redesign & Rich Editorial Surfaces** - Neoclassical judicial hero backdrop with gradient lighting, legal library imagery on `/about`, visual practice cards, and elevated card hover micro-interactions.
+11. **Heritage Color Palette Theme Switcher & Mahogany Library Hero** - Dynamic client-side theme switcher supporting 3 curated legal heritage palettes (Imperial Navy, Oxford Burgundy, Heritage Forest Green) stored in `localStorage`, navigation bar selector, and dark mahogany legal library hero backdrop.
 
 ## Data model
 
