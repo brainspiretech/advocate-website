@@ -1,123 +1,543 @@
 @import "tailwindcss";
 
+/* ================================================================
+   DESIGN SHOWCASE — 12 Single-Page Website Themes
+   Each theme sets CSS variables + structural layout classes
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   1. MIDNIGHT OBSIDIAN — Ultra-dark luxury
+   ---------------------------------------------------------------- */
 :root,
-:root[data-theme="navy"],
-[data-theme="navy"] {
-  /* Brand Palette 1: Imperial Navy & Warm Brass (Default) */
-  --primary: #0b192c;
-  --primary-light: #182b45;
-  --primary-dark: #060e19;
-  --primary-foreground: #ffffff;
-
-  /* Accent - Warm Muted Brass / Classic Legal Gold */
-  --accent: #c5a880;
-  --accent-hover: #b39266;
-  --accent-light: #f5eedc;
-  --accent-foreground: #0b192c;
-
-  /* Surfaces & Backgrounds */
-  --background: #fbfbfc;
-  --surface: #ffffff;
-  --surface-subtle: #f4f5f8;
-  --surface-muted: #eef0f4;
-
-  /* Text & Content */
-  --foreground: #151c28;
-  --foreground-muted: #526071;
-  --foreground-subtle: #7b8a9b;
-
-  /* Borders & Dividers */
-  --border: #e2e6ed;
-  --border-subtle: #eceff4;
-  --border-focus: #c5a880;
+:root[data-theme="obsidian"],
+[data-theme="obsidian"] {
+  --primary: #0d0d0d;
+  --primary-light: #1a1a1a;
+  --primary-dark: #050505;
+  --primary-foreground: #f5f3ef;
+  --accent: #d4af37;
+  --accent-hover: #c9a02e;
+  --accent-light: #fdf8e8;
+  --accent-foreground: #0d0d0d;
+  --background: #0d0d0d;
+  --surface: #141414;
+  --surface-subtle: #1a1a1a;
+  --surface-muted: #222222;
+  --foreground: #f5f3ef;
+  --foreground-muted: #a09d94;
+  --foreground-subtle: #706d66;
+  --border: #2a2a2a;
+  --border-subtle: #222222;
+  --border-focus: #d4af37;
+  --hero-min-h: 100vh;
+  --section-py: 6rem;
+  --card-radius: 0.125rem;
+  --card-border: 1px solid #2a2a2a;
+  --nav-bg: rgba(13, 13, 13, 0.85);
+  --nav-blur: 12px;
+  --nav-border: rgba(212, 175, 55, 0.15);
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
 }
 
+/* ----------------------------------------------------------------
+   2. IVORY & SLATE — Editorial minimalist
+   ---------------------------------------------------------------- */
+:root[data-theme="ivory"],
+[data-theme="ivory"] {
+  --primary: #1e293b;
+  --primary-light: #334155;
+  --primary-dark: #0f172a;
+  --primary-foreground: #ffffff;
+  --accent: #b87333;
+  --accent-hover: #a66429;
+  --accent-light: #fdf5ed;
+  --accent-foreground: #1e293b;
+  --background: #fdfbf7;
+  --surface: #ffffff;
+  --surface-subtle: #f8f5f0;
+  --surface-muted: #f1ede6;
+  --foreground: #1e293b;
+  --foreground-muted: #64748b;
+  --foreground-subtle: #94a3b8;
+  --border: #e2ded6;
+  --border-subtle: #eeeae3;
+  --border-focus: #b87333;
+  --hero-min-h: 90vh;
+  --section-py: 5rem;
+  --card-radius: 0.25rem;
+  --card-border: 1px solid #e2ded6;
+  --nav-bg: rgba(253, 251, 247, 0.92);
+  --nav-blur: 10px;
+  --nav-border: rgba(184, 115, 51, 0.15);
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   3. EMERALD CHAMBERS — Deep green heritage
+   ---------------------------------------------------------------- */
+:root[data-theme="emerald"],
+[data-theme="emerald"] {
+  --primary: #0a2f1f;
+  --primary-light: #153d2b;
+  --primary-dark: #061a12;
+  --primary-foreground: #ffffff;
+  --accent: #c19a49;
+  --accent-hover: #ab873d;
+  --accent-light: #f8f4e8;
+  --accent-foreground: #0a2f1f;
+  --background: #f8f4e8;
+  --surface: #ffffff;
+  --surface-subtle: #f2edd8;
+  --surface-muted: #ebe5d0;
+  --foreground: #0a2f1f;
+  --foreground-muted: #3d6b52;
+  --foreground-subtle: #6b9a7e;
+  --border: #d4cdb8;
+  --border-subtle: #e2dcc8;
+  --border-focus: #c19a49;
+  --hero-min-h: 85vh;
+  --section-py: 5rem;
+  --card-radius: 0.125rem;
+  --card-border: 2px solid #d4cdb8;
+  --nav-bg: rgba(248, 244, 232, 0.92);
+  --nav-blur: 8px;
+  --nav-border: rgba(193, 154, 73, 0.2);
+  --font-heading: "Libre Baskerville", Georgia, serif;
+  --font-body: "Source Sans 3", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   4. MONOCHROME AUTHORITY — Black & white razor
+   ---------------------------------------------------------------- */
+:root[data-theme="monochrome"],
+[data-theme="monochrome"] {
+  --primary: #000000;
+  --primary-light: #1a1a1a;
+  --primary-dark: #000000;
+  --primary-foreground: #ffffff;
+  --accent: #e8a838;
+  --accent-hover: #d49930;
+  --accent-light: #fff8e8;
+  --accent-foreground: #000000;
+  --background: #ffffff;
+  --surface: #fafafa;
+  --surface-subtle: #f5f5f5;
+  --surface-muted: #eeeeee;
+  --foreground: #000000;
+  --foreground-muted: #555555;
+  --foreground-subtle: #999999;
+  --border: #e0e0e0;
+  --border-subtle: #f0f0f0;
+  --border-focus: #000000;
+  --hero-min-h: 100vh;
+  --section-py: 6rem;
+  --card-radius: 0;
+  --card-border: 1px solid #e0e0e0;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-blur: 10px;
+  --nav-border: rgba(0, 0, 0, 0.08);
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Inter Tight", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   5. WARM SANDSTONE — Earthy & approachable
+   ---------------------------------------------------------------- */
+:root[data-theme="sandstone"],
+[data-theme="sandstone"] {
+  --primary: #3e2723;
+  --primary-light: #5d4037;
+  --primary-dark: #2c1b18;
+  --primary-foreground: #ffffff;
+  --accent: #c0704d;
+  --accent-hover: #a85d3e;
+  --accent-light: #fff3ec;
+  --accent-foreground: #3e2723;
+  --background: #f5e6d3;
+  --surface: #fff8f0;
+  --surface-subtle: #f0dcc6;
+  --surface-muted: #e8d1b8;
+  --foreground: #3e2723;
+  --foreground-muted: #795548;
+  --foreground-subtle: #a1887f;
+  --border: #d7c4ad;
+  --border-subtle: #e5d5c2;
+  --border-focus: #c0704d;
+  --hero-min-h: 80vh;
+  --section-py: 4rem;
+  --card-radius: 0.75rem;
+  --card-border: 1px solid #d7c4ad;
+  --nav-bg: rgba(245, 230, 211, 0.92);
+  --nav-blur: 10px;
+  --nav-border: rgba(192, 112, 77, 0.15);
+  --font-heading: "Merriweather", Georgia, serif;
+  --font-body: "Nunito Sans", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   6. STEEL & GLASS — Modern corporate
+   ---------------------------------------------------------------- */
+:root[data-theme="steel"],
+[data-theme="steel"] {
+  --primary: #1a1a2e;
+  --primary-light: #2a2a4e;
+  --primary-dark: #0e0e1a;
+  --primary-foreground: #ffffff;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+  --accent-foreground: #ffffff;
+  --background: #f7f8fa;
+  --surface: #ffffff;
+  --surface-subtle: #f1f3f6;
+  --surface-muted: #e8ecf0;
+  --foreground: #1a1a2e;
+  --foreground-muted: #4b5563;
+  --foreground-subtle: #9ca3af;
+  --border: #e5e7eb;
+  --border-subtle: #f3f4f6;
+  --border-focus: #2563eb;
+  --hero-min-h: 85vh;
+  --section-py: 5rem;
+  --card-radius: 0.75rem;
+  --card-border: 1px solid #e5e7eb;
+  --nav-bg: rgba(247, 248, 250, 0.8);
+  --nav-blur: 16px;
+  --nav-border: rgba(37, 99, 235, 0.1);
+  --font-heading: "Outfit", -apple-system, sans-serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   7. BURGUNDY COURT — Regal & commanding
+   ---------------------------------------------------------------- */
 :root[data-theme="burgundy"],
 [data-theme="burgundy"] {
-  /* Brand Palette 2: Oxford Burgundy & Warm Amber */
-  --primary: #2a1217;
-  --primary-light: #3d1d23;
-  --primary-dark: #18080c;
+  --primary: #4a0e2b;
+  --primary-light: #6b1840;
+  --primary-dark: #2e0919;
   --primary-foreground: #ffffff;
-
-  /* Accent - Warm Amber Gold */
-  --accent: #d4a373;
-  --accent-hover: #c4915f;
-  --accent-light: #f9f2ea;
-  --accent-foreground: #2a1217;
-
-  /* Surfaces & Backgrounds */
-  --background: #fcfbfb;
+  --accent: #d4a843;
+  --accent-hover: #c09838;
+  --accent-light: #fdf6e3;
+  --accent-foreground: #4a0e2b;
+  --background: #fdf8f0;
   --surface: #ffffff;
-  --surface-subtle: #f8f4f5;
-  --surface-muted: #f2ebec;
-
-  /* Text & Content */
-  --foreground: #201416;
-  --foreground-muted: #6b5559;
-  --foreground-subtle: #8a7377;
-
-  /* Borders & Dividers */
-  --border: #ede4e5;
-  --border-subtle: #f4eeef;
-  --border-focus: #d4a373;
+  --surface-subtle: #f9f1e5;
+  --surface-muted: #f3e8d8;
+  --foreground: #4a0e2b;
+  --foreground-muted: #7a3b58;
+  --foreground-subtle: #a96b85;
+  --border: #e8d8c8;
+  --border-subtle: #f0e5d8;
+  --border-focus: #d4a843;
+  --hero-min-h: 90vh;
+  --section-py: 5rem;
+  --card-radius: 0.125rem;
+  --card-border: 2px solid #e8d8c8;
+  --nav-bg: rgba(253, 248, 240, 0.92);
+  --nav-blur: 8px;
+  --nav-border: rgba(212, 168, 67, 0.2);
+  --font-heading: "Cormorant Infant", Georgia, serif;
+  --font-body: "Lato", -apple-system, sans-serif;
 }
 
-:root[data-theme="green"],
-[data-theme="green"] {
-  /* Brand Palette 3: Collegiate Forest Green & Antique Bronze */
-  --primary: #12261b;
-  --primary-light: #1d3b2a;
-  --primary-dark: #0a1710;
+/* ----------------------------------------------------------------
+   8. NORDIC CLEAN — Scandinavian simplicity
+   ---------------------------------------------------------------- */
+:root[data-theme="nordic"],
+[data-theme="nordic"] {
+  --primary: #0f172a;
+  --primary-light: #1e293b;
+  --primary-dark: #020617;
   --primary-foreground: #ffffff;
-
-  /* Accent - Antique Bronze Brass */
-  --accent: #c29b63;
-  --accent-hover: #af8850;
-  --accent-light: #f4efe6;
-  --accent-foreground: #12261b;
-
-  /* Surfaces & Backgrounds */
-  --background: #fbfcfb;
+  --accent: #6b8f71;
+  --accent-hover: #5a7d60;
+  --accent-light: #f0f5f1;
+  --accent-foreground: #ffffff;
+  --background: #fafafa;
   --surface: #ffffff;
-  --surface-subtle: #f3f6f4;
-  --surface-muted: #eaf0ec;
-
-  /* Text & Content */
-  --foreground: #142018;
-  --foreground-muted: #536459;
-  --foreground-subtle: #7a8c80;
-
-  /* Borders & Dividers */
-  --border: #e1e8e3;
-  --border-subtle: #ecf0ed;
-  --border-focus: #c29b63;
+  --surface-subtle: #f5f5f5;
+  --surface-muted: #efefef;
+  --foreground: #0f172a;
+  --foreground-muted: #475569;
+  --foreground-subtle: #94a3b8;
+  --border: #e8e8e8;
+  --border-subtle: #f2f2f2;
+  --border-focus: #6b8f71;
+  --hero-min-h: 80vh;
+  --section-py: 5rem;
+  --card-radius: 0.25rem;
+  --card-border: none;
+  --nav-bg: rgba(250, 250, 250, 0.95);
+  --nav-blur: 8px;
+  --nav-border: rgba(107, 143, 113, 0.1);
+  --font-heading: "Space Grotesk", -apple-system, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, sans-serif;
 }
 
+/* ----------------------------------------------------------------
+   9. CINEMATIC PARALLAX — Story-driven scroll
+   ---------------------------------------------------------------- */
+:root[data-theme="cinematic"],
+[data-theme="cinematic"] {
+  --primary: #111827;
+  --primary-light: #1f2937;
+  --primary-dark: #0a0e17;
+  --primary-foreground: #ffffff;
+  --accent: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-light: #fffbeb;
+  --accent-foreground: #111827;
+  --background: #111827;
+  --surface: #1f2937;
+  --surface-subtle: #1a2234;
+  --surface-muted: #243044;
+  --foreground: #f3f4f6;
+  --foreground-muted: #9ca3af;
+  --foreground-subtle: #6b7280;
+  --border: #374151;
+  --border-subtle: #2a3444;
+  --border-focus: #f59e0b;
+  --hero-min-h: 100vh;
+  --section-py: 6rem;
+  --card-radius: 0.5rem;
+  --card-border: 1px solid #374151;
+  --nav-bg: rgba(17, 24, 39, 0.8);
+  --nav-blur: 16px;
+  --nav-border: rgba(245, 158, 11, 0.15);
+  --font-heading: var(--font-lora), Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   10. CLASSICAL MARBLE — Neo-classical elegance
+   ---------------------------------------------------------------- */
+:root[data-theme="marble"],
+[data-theme="marble"] {
+  --primary: #1b2a4a;
+  --primary-light: #2a3d66;
+  --primary-dark: #101b33;
+  --primary-foreground: #ffffff;
+  --accent: #b8955a;
+  --accent-hover: #a68349;
+  --accent-light: #faf5ec;
+  --accent-foreground: #1b2a4a;
+  --background: #f0ede8;
+  --surface: #fafaf7;
+  --surface-subtle: #eae6df;
+  --surface-muted: #e0dbd2;
+  --foreground: #1b2a4a;
+  --foreground-muted: #4a5e7a;
+  --foreground-subtle: #7a8da6;
+  --border: #d5cfbf;
+  --border-subtle: #e2ddd0;
+  --border-focus: #b8955a;
+  --hero-min-h: 85vh;
+  --section-py: 5rem;
+  --card-radius: 0.25rem;
+  --card-border: 1px solid #d5cfbf;
+  --nav-bg: rgba(240, 237, 232, 0.92);
+  --nav-blur: 8px;
+  --nav-border: rgba(184, 149, 90, 0.15);
+  --font-heading: "EB Garamond", Georgia, serif;
+  --font-body: "Poppins", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   11. MIDNIGHT GRADIENT — Contemporary dark
+   ---------------------------------------------------------------- */
+:root[data-theme="midnight"],
+[data-theme="midnight"] {
+  --primary: #0f0c29;
+  --primary-light: #302b63;
+  --primary-dark: #090720;
+  --primary-foreground: #ffffff;
+  --accent: #00d4ff;
+  --accent-hover: #00b8e0;
+  --accent-light: #e0faff;
+  --accent-foreground: #0f0c29;
+  --background: #0f0c29;
+  --surface: #1a1645;
+  --surface-subtle: #16133a;
+  --surface-muted: #201c55;
+  --foreground: #ffffff;
+  --foreground-muted: #a8a4cc;
+  --foreground-subtle: #706ca0;
+  --border: #2a2660;
+  --border-subtle: #1e1a50;
+  --border-focus: #00d4ff;
+  --hero-min-h: 100vh;
+  --section-py: 6rem;
+  --card-radius: 0.75rem;
+  --card-border: 1px solid rgba(0, 212, 255, 0.15);
+  --nav-bg: rgba(15, 12, 41, 0.8);
+  --nav-blur: 16px;
+  --nav-border: rgba(0, 212, 255, 0.15);
+  --font-heading: "Sora", -apple-system, sans-serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   12. CHAMPAGNE & CHARCOAL — Quiet luxury
+   ---------------------------------------------------------------- */
+:root[data-theme="champagne"],
+[data-theme="champagne"] {
+  --primary: #2d2d2d;
+  --primary-light: #444444;
+  --primary-dark: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --accent: #b76e79;
+  --accent-hover: #a25e69;
+  --accent-light: #fff0f2;
+  --accent-foreground: #2d2d2d;
+  --background: #f5f0e8;
+  --surface: #ffffff;
+  --surface-subtle: #efe9df;
+  --surface-muted: #e8e1d5;
+  --foreground: #2d2d2d;
+  --foreground-muted: #6b6b6b;
+  --foreground-subtle: #999999;
+  --border: #ddd6c8;
+  --border-subtle: #e8e2d5;
+  --border-focus: #b76e79;
+  --hero-min-h: 80vh;
+  --section-py: 5rem;
+  --card-radius: 0.5rem;
+  --card-border: 1px solid #ddd6c8;
+  --nav-bg: rgba(245, 240, 232, 0.95);
+  --nav-blur: 8px;
+  --nav-border: rgba(183, 110, 121, 0.15);
+  --font-heading: "Crimson Pro", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   13. ILA CHAMBERS (SIGNATURE) — Boutique slate & champagne gold
+   ---------------------------------------------------------------- */
+:root[data-theme="ila"],
+[data-theme="ila"] {
+  --primary: #1e2d3d;
+  --primary-light: #2c3e50;
+  --primary-dark: #15202b;
+  --primary-foreground: #ffffff;
+  --accent: #c5a880;
+  --accent-hover: #b59465;
+  --accent-light: #f9f6f0;
+  --accent-foreground: #1e2d3d;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-subtle: #f8f9fa;
+  --surface-muted: #eef1f4;
+  --foreground: #1e2d3d;
+  --foreground-muted: #5a6e82;
+  --foreground-subtle: #8898aa;
+  --border: #e2e8f0;
+  --border-subtle: #edf2f7;
+  --border-focus: #c5a880;
+  --hero-min-h: 90vh;
+  --section-py: 5rem;
+  --card-radius: 0.375rem;
+  --card-border: 1px solid #e2e8f0;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-blur: 12px;
+  --nav-border: rgba(197, 168, 128, 0.25);
+  --font-heading: var(--font-lora), "Times New Roman", Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   14. OXFORD SAPPHIRE — Deep navy & cyan precision
+   ---------------------------------------------------------------- */
+:root[data-theme="sapphire"],
+[data-theme="sapphire"] {
+  --primary: #0a192f;
+  --primary-light: #112240;
+  --primary-dark: #020c1b;
+  --primary-foreground: #e6f1ff;
+  --accent: #64ffda;
+  --accent-hover: #4cdbb8;
+  --accent-light: #0d2838;
+  --accent-foreground: #0a192f;
+  --background: #0a192f;
+  --surface: #112240;
+  --surface-subtle: #1d3356;
+  --surface-muted: #233554;
+  --foreground: #ccd6f6;
+  --foreground-muted: #8892b0;
+  --foreground-subtle: #495670;
+  --border: #233554;
+  --border-subtle: #1d3356;
+  --border-focus: #64ffda;
+  --hero-min-h: 90vh;
+  --section-py: 5.5rem;
+  --card-radius: 0.25rem;
+  --card-border: 1px solid #233554;
+  --nav-bg: rgba(10, 25, 47, 0.92);
+  --nav-blur: 12px;
+  --nav-border: rgba(100, 255, 218, 0.2);
+  --font-heading: var(--font-inter), -apple-system, sans-serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   15. KYOTO MINIMALIST — Sumi ink & crimson seal
+   ---------------------------------------------------------------- */
+:root[data-theme="kyoto"],
+[data-theme="kyoto"] {
+  --primary: #1a1a1a;
+  --primary-light: #2d2d2d;
+  --primary-dark: #0a0a0a;
+  --primary-foreground: #f9f6f0;
+  --accent: #e63946;
+  --accent-hover: #c92a37;
+  --accent-light: #fdf0f0;
+  --accent-foreground: #ffffff;
+  --background: #f9f6f0;
+  --surface: #ffffff;
+  --surface-subtle: #f2ede4;
+  --surface-muted: #e8e0d5;
+  --foreground: #1a1a1a;
+  --foreground-muted: #595959;
+  --foreground-subtle: #8c8c8c;
+  --border: #dcd6cb;
+  --border-subtle: #e6e0d5;
+  --border-focus: #e63946;
+  --hero-min-h: 85vh;
+  --section-py: 5rem;
+  --card-radius: 0;
+  --card-border: 1px solid #1a1a1a;
+  --nav-bg: rgba(249, 246, 240, 0.95);
+  --nav-blur: 8px;
+  --nav-border: rgba(26, 26, 26, 0.15);
+  --font-heading: var(--font-lora), Georgia, serif;
+  --font-body: var(--font-inter), -apple-system, sans-serif;
+}
+
+/* ================================================================
+   TAILWIND THEME MAPPING
+   ================================================================ */
 @theme inline {
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
   --color-primary-foreground: var(--primary-foreground);
-
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
   --color-accent-foreground: var(--accent-foreground);
-
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-surface-subtle: var(--surface-subtle);
   --color-surface-muted: var(--surface-muted);
-
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
   --color-foreground-subtle: var(--foreground-subtle);
-
   --color-border: var(--border);
   --color-border-subtle: var(--border-subtle);
   --color-border-focus: var(--border-focus);
-
   --font-serif:
     var(--font-lora), Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans:
@@ -125,18 +545,28 @@
     sans-serif;
 }
 
+/* ================================================================
+   BASE STYLES
+   ================================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }
 
 h1,
 h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
@@ -145,6 +575,431 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   letter-spacing: -0.01em;
+}
+
+/* ================================================================
+   NAVIGATION STYLES — Each theme overrides
+   ================================================================ */
+.sp-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(var(--nav-blur));
+  -webkit-backdrop-filter: blur(var(--nav-blur));
+  border-bottom: 1px solid var(--nav-border);
+  transition: all 0.3s ease;
+}
+
+.sp-nav.sp-nav-scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  background: var(--surface);
+}
+
+.sp-nav-logo {
+  cursor: pointer;
+}
+.sp-nav-title {
+  color: var(--foreground);
+}
+.sp-nav-subtitle {
+  color: var(--foreground-muted);
+}
+.sp-nav-emblem {
+  background: var(--primary);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.sp-nav-dropdown-btn {
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.sp-nav-dropdown-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.sp-nav-dropdown {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.sp-nav-dropdown-item {
+  color: var(--foreground-muted);
+}
+.sp-nav-dropdown-item:hover {
+  background: var(--surface-subtle);
+  color: var(--foreground);
+}
+.sp-nav-dropdown-active {
+  background: var(--surface-subtle);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sp-nav-dot {
+  background: var(--accent);
+}
+
+.sp-nav-hamburger {
+  color: var(--foreground-muted);
+  border: 1px solid var(--border);
+}
+
+.sp-mobile-drawer {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+.sp-mobile-nav-item {
+  color: var(--foreground-muted);
+}
+.sp-mobile-nav-item:hover {
+  background: var(--surface-subtle);
+  color: var(--foreground);
+}
+.sp-mobile-nav-active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.design-switcher-btn {
+  color: var(--foreground);
+  border-color: var(--border);
+  background: var(--surface);
+}
+.design-switcher-btn:hover {
+  border-color: var(--accent);
+}
+
+.design-switcher-dropdown {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.design-option-active {
+  background: var(--surface-subtle);
+  color: var(--foreground);
+  font-weight: 600;
+}
+.design-option-inactive {
+  color: var(--foreground-muted);
+}
+.design-option-inactive:hover {
+  background: var(--surface-subtle);
+  color: var(--foreground);
+}
+
+/* ================================================================
+   SECTION STYLES
+   ================================================================ */
+.sp-section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+  transition: background-color 0.4s ease;
+}
+
+.sp-card {
+  border-radius: var(--card-radius);
+  border: var(--card-border);
+  background: var(--surface);
+  transition: all 0.3s ease;
+}
+.sp-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================================================
+   HERO STYLES — Per-theme dramatic differences
+   ================================================================ */
+.sp-hero {
+  min-height: var(--hero-min-h);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Obsidian: centered, grain texture */
+[data-theme="obsidian"] .sp-hero {
+  background: #0d0d0d;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="obsidian"] .sp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+[data-theme="obsidian"] .sp-hero-title {
+  color: #d4af37;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* Ivory: split layout */
+[data-theme="ivory"] .sp-hero {
+  background: #fdfbf7;
+}
+[data-theme="ivory"] .sp-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+[data-theme="ivory"] .sp-hero-title {
+  color: #1e293b;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+}
+
+/* Emerald: institutional centered */
+[data-theme="emerald"] .sp-hero {
+  background: #0a2f1f;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="emerald"] .sp-hero-title {
+  color: #f8f4e8;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+[data-theme="emerald"] .sp-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #c19a49, transparent);
+}
+
+/* Monochrome: mega typography */
+[data-theme="monochrome"] .sp-hero {
+  background: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="monochrome"] .sp-hero-title {
+  color: #000000;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+/* Sandstone: warm gradient */
+[data-theme="sandstone"] .sp-hero {
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d1b8 50%, #f5e6d3 100%);
+}
+[data-theme="sandstone"] .sp-hero-title {
+  color: #3e2723;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Steel: charcoal-blue gradient */
+[data-theme="steel"] .sp-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #ffffff;
+}
+[data-theme="steel"] .sp-hero-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+[data-theme="steel"] .sp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 50%,
+    rgba(37, 99, 235, 0.15) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Burgundy: rich hero with ornament */
+[data-theme="burgundy"] .sp-hero {
+  background: #4a0e2b;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="burgundy"] .sp-hero-title {
+  color: #fdf8f0;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+[data-theme="burgundy"] .sp-hero::before,
+[data-theme="burgundy"] .sp-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4a843, transparent);
+}
+[data-theme="burgundy"] .sp-hero::before {
+  top: 0;
+}
+[data-theme="burgundy"] .sp-hero::after {
+  bottom: 0;
+}
+
+/* Nordic: ultra-clean left-aligned */
+[data-theme="nordic"] .sp-hero {
+  background: #fafafa;
+}
+[data-theme="nordic"] .sp-hero-title {
+  color: #0f172a;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 500;
+}
+
+/* Cinematic: film title card */
+[data-theme="cinematic"] .sp-hero {
+  background: #111827;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="cinematic"] .sp-hero-title {
+  color: #f3f4f6;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+[data-theme="cinematic"] .sp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 80%,
+    rgba(245, 158, 11, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Marble: centered with texture */
+[data-theme="marble"] .sp-hero {
+  background: #f0ede8;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="marble"] .sp-hero-title {
+  color: #1b2a4a;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+[data-theme="marble"] .sp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%231B2A4A' stroke-width='0.5'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Midnight: animated gradient */
+[data-theme="midnight"] .sp-hero {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  text-align: center;
+  justify-content: center;
+  animation: midnightShift 8s ease infinite;
+}
+@keyframes midnightShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+[data-theme="midnight"] .sp-hero-title {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+/* Champagne: understated text-only */
+[data-theme="champagne"] .sp-hero {
+  background: #f5f0e8;
+  text-align: center;
+  justify-content: center;
+}
+[data-theme="champagne"] .sp-hero-title {
+  color: #2d2d2d;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* ================================================================
+   SCROLL ANIMATIONS
+   ================================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* ================================================================
+   RESPONSIVE OVERRIDES
+   ================================================================ */
+@media (max-width: 768px) {
+  [data-theme="ivory"] .sp-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  [data-theme="monochrome"] .sp-hero-title {
+    font-size: clamp(2.5rem, 14vw, 5rem);
+  }
+}
+
+/* ================================================================
+   SPECIAL EFFECTS
+   ================================================================ */
+
+/* Midnight theme glow cards */
+[data-theme="midnight"] .sp-card:hover {
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+/* Steel glassmorphism cards */
+[data-theme="steel"] .sp-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Sandstone rounded everything */
+[data-theme="sandstone"] .sp-nav {
+  border-radius: 0;
+}
+[data-theme="sandstone"] .sp-nav-emblem {
+  border-radius: 50%;
+}
+
+/* Obsidian gold divider */
+[data-theme="obsidian"] .sp-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  max-width: 200px;
+  margin: 2rem auto;
+}
+
+/* Burgundy gold divider */
+[data-theme="burgundy"] .sp-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4a843, transparent);
+  max-width: 200px;
+  margin: 2rem auto;
 }

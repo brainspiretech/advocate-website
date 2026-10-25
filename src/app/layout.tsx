@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import { DisclaimerModal } from "@/components/disclaimer/DisclaimerModal";
 import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
+import { SinglePageNav } from "@/components/layout/SinglePageNav";
+import { ThemeProvider } from "@/components/theme/ThemeContext";
 import { firmConfig } from "@/config/firm";
 import "./globals.css";
 
@@ -44,15 +45,17 @@ export default function RootLayout({
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Static inline script required for zero-flicker theme restoration
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("apex_theme");if(t&&("navy"===t||"burgundy"===t||"green"===t)){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("apex_design")||localStorage.getItem("apex_theme")||"obsidian";document.documentElement.setAttribute("data-theme",t)}catch(e){}})();`,
           }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent/20 selection:text-primary">
-        <DisclaimerModal />
-        <Navbar />
-        <main className="flex-1 flex flex-col">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <DisclaimerModal />
+          <SinglePageNav />
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

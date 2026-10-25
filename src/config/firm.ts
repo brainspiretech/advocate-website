@@ -69,37 +69,37 @@ export interface FirmConfig {
 }
 
 export const firmConfig: FirmConfig = {
-  name: "Apex Chambers",
-  shortName: "Apex Chambers",
-  tagline: "Precision. Integrity. Perspective.",
+  name: "Newshore Legal",
+  shortName: "Newshore Legal",
+  tagline: "Excellence in Immigration Law & Dispute Resolution",
   establishedYear: 2012,
   shortDescription:
-    "A full-service litigation and advisory chamber based in New Delhi, representing clients before the Supreme Court of India, Delhi High Court, and specialized judicial tribunals.",
+    "A premier law firm specializing in Global Corporate Immigration, Residency & Citizenship, Commercial Dispute Resolution, and Appellate Litigation.",
   fullDescription:
-    "Apex Chambers is an established Indian law chamber providing comprehensive legal counsel and dispute resolution services. Anchored by dedication to rigorous jurisprudence, the chamber represents corporate enterprises, statutory bodies, and individuals across diverse civil, commercial, constitutional, and criminal matters. The chambers practice strictly adheres to the ethical standards prescribed by the Bar Council of India.",
+    "Newshore Legal is an established Indian and international legal practice providing specialized counsel in immigration law, citizenship advisory, and comprehensive dispute resolution. Anchored by strategic foresight and ethical dedication, the firm represents multinational corporations, high-net-worth individuals, global enterprises, and private clients across immigration appeals, cross-border commercial arbitration, civil litigation, and judicial review before constitutional courts and specialized tribunals.",
   jurisdictions: [
     "Supreme Court of India",
     "High Court of Delhi",
-    "National Company Law Tribunal (NCLT & NCLAT)",
-    "National Green Tribunal (NGT)",
-    "Debts Recovery Appellate Tribunal (DRAT)",
-    "Arbitral Tribunals (Domestic & International)",
+    "Foreigners Regional Registration Office (FRRO) & MHA",
+    "International & Domestic Commercial Arbitral Tribunals",
+    "National Company Law Appellate Tribunal (NCLAT)",
+    "Central Administrative Tribunal (CAT, Principal Bench)",
   ],
   corePrinciples: [
     {
-      title: "Integrity & Independence",
+      title: "Global Mobility & Compliance",
       description:
-        "Upholding absolute fiduciary duty to clients while preserving unwavering institutional fidelity to the administration of justice.",
+        "Navigating intricate international immigration statutes, corporate visa frameworks, and cross-border regulatory compliance with meticulous strategic precision.",
     },
     {
-      title: "Analytical Precision",
+      title: "Decisive Dispute Resolution",
       description:
-        "Every brief is examined with meticulous factual scrutiny, thorough statutory interpretation, and deep research into authoritative judicial precedents.",
+        "Formulating realistic, assertive litigation and arbitration strategies tailored to protect commercial interests and resolve complex contractual conflicts.",
     },
     {
-      title: "Strategic Advocacy",
+      title: "High Partner Involvement",
       description:
-        "Formulating realistic, pragmatic legal strategies tailored to commercial imperatives and constitutional guarantees.",
+        "Providing bespoke counsel characterized by direct senior advocate engagement, strict confidentiality, and tailored solutions standing firm in complexity.",
     },
   ],
   office: {
@@ -110,13 +110,13 @@ export const firmConfig: FirmConfig = {
     state: "Delhi",
     postalCode: "110001",
     phone: ["+91 11 2338 0000", "+91 98110 00000"],
-    email: "contact@apexchambers.in",
+    email: "contact@newshorelegal.com",
     hours: "Monday – Saturday: 09:30 AM – 07:30 PM (By Prior Appointment)",
     mapEmbedUrl:
       "https://maps.google.com/maps?q=Supreme+Court+of+India+New+Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed",
   },
   socialLinks: {
-    linkedin: "https://www.linkedin.com",
+    linkedin: "https://www.linkedin.com/company/newshorelegal",
   },
   bciCompliance: {
     ruleReference:
@@ -129,141 +129,142 @@ export const firmConfig: FirmConfig = {
 
 export const practiceAreas: PracticeArea[] = [
   {
-    id: "commercial-disputes-arbitration",
-    slug: "commercial-disputes-arbitration",
-    title: "Commercial Litigation & Arbitration",
+    id: "global-corporate-immigration",
+    slug: "global-corporate-immigration",
+    title: "Global Corporate & Business Immigration",
     shortDescription:
-      "Representation in complex contractual disputes, domestic and international commercial arbitrations, and enforcement proceedings under the Arbitration and Conciliation Act, 1996.",
+      "Advising multinational enterprises and corporate leaders on intra-company transfers, business visas, work permits, sponsor licences, and statutory workforce mobility audits.",
     detailedOverview:
-      "Apex Chambers maintains a substantial practice in commercial dispute resolution, advising and representing public and private sector corporations, multinational enterprises, and infrastructure developers. Our advocates regularly appear before Sole Arbitrators, Three-Member Tribunals, and High Courts in Section 9 (interim relief), Section 11 (appointment of arbitrators), Section 34 (setting aside awards), and Section 36 (enforcement) proceedings.",
+      "Newshore Legal maintains a specialized corporate immigration practice assisting global enterprises, technology firms, and multinational leadership in navigating cross-border employee mobility. We provide end-to-end counsel on employment visas, sponsor compliance, intra-company transfers, and strategic workforce deployment adhering to international immigration statutes.",
     keyAreas: [
-      "Domestic & International Commercial Arbitration",
-      "EPC, Infrastructure & Construction Contract Disputes",
+      "Corporate Work Permits & Intra-Company Transfers (ICT)",
+      "Business & Investor Visas (Global Entry & Residency)",
+      "Employer Sponsorship Licences & Compliance Audits",
+      "Statutory Expatriate Tax & Immigration Coordination",
+      "Executive Relocation & Cross-Border Advisory",
+    ],
+    courts: [
+      "Ministry of Home Affairs (Foreigners Division)",
+      "Foreigners Regional Registration Office (FRRO)",
+      "High Court of Delhi (Writ Jurisdiction)",
+      "High Commissions & Consular Visa Sections",
+    ],
+    iconName: "Briefcase",
+    image: "/images/practice/commercial-disputes-arbitration.jpg",
+  },
+  {
+    id: "citizenship-residency-private-client",
+    slug: "citizenship-residency-private-client",
+    title: "Individual Immigration, Residency & Citizenship",
+    shortDescription:
+      "Counseling high-net-worth individuals and families in acquiring residency by investment, dual citizenship, golden visas, naturalization, and overseas citizenship registration.",
+    detailedOverview:
+      "Our private client immigration team advises individuals, entrepreneurs, and families seeking international residency and citizenship solutions. We assist with Overseas Citizen of India (OCI) applications, complex renunciation of Indian citizenship, citizenship restoration, family reunification, and strategic golden visa programs across Europe, North America, and the Middle East.",
+    keyAreas: [
+      "Overseas Citizenship of India (OCI) & Card Issuance",
+      "Citizenship by Investment & Permanent Residency (Golden Visas)",
+      "Citizenship Renunciation & Surrender Certificate Processes",
+      "Spouse, Dependent & Family Reunification Visas",
+      "Long-term Residency & Naturalization Applications",
+    ],
+    courts: [
+      "Ministry of Home Affairs (Citizenship Division)",
+      "FRRO Regional Headquarters (New Delhi)",
+      "High Court of Delhi",
+    ],
+    iconName: "Landmark",
+    image: "/images/practice/constitutional-administrative-law.jpg",
+  },
+  {
+    id: "immigration-litigation-appeals",
+    slug: "immigration-litigation-appeals",
+    title: "Immigration Litigation, Appeals & Judicial Review",
+    shortDescription:
+      "Courtroom advocacy and judicial review challenging visa refusals, deportation orders, citizenship revocations, blacklisting, and unlawful travel bans.",
+    detailedOverview:
+      "When administrative avenues fail, Newshore Legal provides aggressive courtroom advocacy before constitutional courts. Our advocates file Article 226 and Article 32 writ petitions challenging arbitrary visa revocations, unjust deportation directives, Look Out Circulars (LOCs), and detention actions by immigration authorities.",
+    keyAreas: [
+      "Writ Petitions Challenging Arbitrary Visa Refusals & Blacklisting",
+      "Look Out Circular (LOC) Quashing & Travel Permission",
+      "Deportation & Detention Defense before Appellate Courts",
+      "Judicial Review of Regulatory Immigration Orders",
+      "Asylum & Human Rights Appellate Proceedings",
+    ],
+    courts: [
+      "Supreme Court of India",
+      "High Court of Delhi (Appellate & Writ Jurisdiction)",
+      "Central Administrative Tribunal (CAT)",
+    ],
+    iconName: "ShieldAlert",
+    image: "/images/practice/white-collar-crime-defense.jpg",
+  },
+  {
+    id: "commercial-dispute-resolution-arbitration",
+    slug: "commercial-dispute-resolution-arbitration",
+    title: "Commercial Dispute Resolution & Arbitration",
+    shortDescription:
+      "Representation in complex commercial disputes, domestic and international arbitrations, and enforcement of foreign awards under the Arbitration and Conciliation Act, 1996.",
+    detailedOverview:
+      "Newshore Legal maintains a premier commercial dispute resolution practice, advising public and private sector corporations and multinational enterprises. Our advocates regularly appear before Sole Arbitrators, Multi-Member Tribunals, and High Courts in Section 9 interim relief, Section 11 arbitrator appointments, Section 34 challenge proceedings, and Section 36 enforcement actions.",
+    keyAreas: [
+      "Domestic & International Commercial Arbitration (ICC, SIAC, LCIA, DIAC)",
       "Shareholder Agreements & Joint Venture Disputes",
       "Enforcement & Execution of Foreign Arbitral Awards",
+      "Cross-Border Contractual Breach & Specific Performance",
       "Commercial Summary Suits under the Commercial Courts Act, 2015",
     ],
     courts: [
       "Supreme Court of India",
       "High Court of Delhi (Commercial Division)",
       "Delhi International Arbitration Centre (DIAC)",
-      "Indian Council of Arbitration (ICA)",
+      "Singapore International Arbitration Centre (SIAC)",
     ],
     iconName: "Scale",
-    image: "/images/practice/commercial-disputes-arbitration.jpg",
-  },
-  {
-    id: "corporate-insolvency-ibc",
-    slug: "corporate-insolvency-ibc",
-    title: "Insolvency & Bankruptcy (IBC)",
-    shortDescription:
-      "Counseling financial creditors, operational creditors, and corporate debtors in insolvency resolution, liquidation processes, and Section 7, 9, and 10 proceedings under the IBC, 2016.",
-    detailedOverview:
-      "The chamber routinely represents financial institutions, operational creditors, resolution applicants, and promoters before the National Company Law Tribunal (NCLT) and the National Company Law Appellate Tribunal (NCLAT). Our team advises on pre-insolvency stress resolution, Section 7/9 filings, approval of Resolution Plans, liquidation proceedings, and avoidance transaction litigation under Sections 43, 45, and 66 of the Code.",
-    keyAreas: [
-      "Corporate Insolvency Resolution Process (CIRP) Representation",
-      "Resolution Plan Scrutiny and Objections",
-      "Preferential, Undervalued & Fraudulent Transaction Claims",
-      "Personal Guarantor Insolvency Proceedings",
-      "Debt Recovery Proceedings before DRT / DRAT",
-    ],
-    courts: [
-      "National Company Law Tribunal (Principal & Regional Benches)",
-      "National Company Law Appellate Tribunal (NCLAT, New Delhi)",
-      "Debts Recovery Tribunal (DRT, Delhi)",
-    ],
-    iconName: "Building2",
     image: "/images/practice/corporate-insolvency-ibc.jpg",
   },
   {
-    id: "white-collar-crime-defense",
-    slug: "white-collar-crime-defense",
-    title: "White-Collar Crime & Special Acts",
+    id: "civil-litigation-contract-enforcement",
+    slug: "civil-litigation-contract-enforcement",
+    title: "Civil Litigation & Contract Enforcement",
     shortDescription:
-      "Defense and trial advocacy in economic offences, prevention of corruption cases, money laundering (PMLA), company fraud (SFIO), and regulatory penal investigations.",
+      "Trial advocacy and appellate representation across contractual enforcement, corporate recovery, asset preservation, injunctions, and appellate challenges.",
     detailedOverview:
-      "Apex Chambers provides dedicated trial and appellate defense in corporate criminal liability, anti-corruption, and economic crime investigations initiated by regulatory and investigative bodies including the Enforcement Directorate (ED), Central Bureau of Investigation (CBI), and Serious Fraud Investigation Office (SFIO). Our practice emphasizes statutory compliance, bail jurisprudence, and quashing of non-cognizable or vexatious complaints under Section 482 of the CrPC / Section 528 of the Bharatiya Nagarik Suraksha Sanhita (BNSS).",
+      "Our advocates possess comprehensive trial and appellate acumen across diverse civil and commercial jurisdictions. We represent corporate entities and individuals in complex contractual litigation, declaratory actions, recovery suits, injunction proceedings, and regulatory compliance litigation before High Courts and appellate tribunals.",
     keyAreas: [
-      "Prevention of Money Laundering Act (PMLA) Defense & Provisional Attachment",
-      "Prevention of Corruption Act (PC Act) Defense",
-      "Serious Fraud Investigation Office (SFIO) Inquiries",
-      "Cheque Dishonour Litigation under Section 138 NI Act",
-      "Anticipatory Bail, Regular Bail & Section 482 CrPC Quashing",
-    ],
-    courts: [
-      "Special PMLA Courts & Special CBI Courts (Rouse Avenue, New Delhi)",
-      "High Court of Delhi",
-      "Supreme Court of India",
-      "Appellate Tribunal for PMLA (ATFP)",
-    ],
-    iconName: "ShieldAlert",
-    image: "/images/practice/white-collar-crime-defense.jpg",
-  },
-  {
-    id: "constitutional-administrative-law",
-    slug: "constitutional-administrative-law",
-    title: "Constitutional & Administrative Law",
-    shortDescription:
-      "Writ litigation under Articles 32 and 226 of the Constitution of India concerning fundamental rights, tenders, executive overreach, and statutory challenges.",
-    detailedOverview:
-      "Our advocates possess deep grounding in constitutional jurisprudence, having represented civic groups, trade associations, and individuals in landmark writ petitions. The chamber regularly challenges arbitrary government policy, tender cancellations, blacklisting orders, and unauthorized executive actions before the Supreme Court of India and various High Courts.",
-    keyAreas: [
-      "Writ Petitions under Article 32 & Article 226",
-      "Public Procurement, Government Tenders & Blacklisting Disputes",
-      "Service & Administrative Matters before Central Administrative Tribunal (CAT)",
-      "Judicial Review of Regulatory & Statutory Authority Actions",
-      "Fundamental Rights & Liberty Enforcement Petitions",
+      "Breach of Commercial Contracts & Damages Claims",
+      "Injunction Applications & Asset Freezing Orders",
+      "Corporate Debt Recovery & Summary Suits",
+      "Shareholder Oppression & Management Disputes (NCLT)",
+      "Appellate Appeals before Division Benches & Supreme Court",
     ],
     courts: [
       "Supreme Court of India",
       "High Court of Delhi",
-      "Central Administrative Tribunal (Principal Bench, New Delhi)",
+      "National Company Law Appellate Tribunal (NCLAT)",
+      "District Courts of New Delhi & NCR",
     ],
-    iconName: "Landmark",
-    image: "/images/practice/constitutional-administrative-law.jpg",
-  },
-  {
-    id: "real-estate-rera-property",
-    slug: "real-estate-rera-property",
-    title: "Real Estate & RERA Litigation",
-    shortDescription:
-      "Adjudication of property title disputes, partition suits, builder-buyer contracts, and developer compliance before the Real Estate Regulatory Authority (RERA).",
-    detailedOverview:
-      "Apex Chambers advises institutional developers, high-net-worth property owners, and homebuyer consortiums on property laws across the National Capital Region (NCR). Our practice covers developer obligations under RERA, specific performance suits, partition litigation, land acquisition compensation challenges, and title verification documentation.",
-    keyAreas: [
-      "Complaints before RERA Authority & Appellate Tribunal (REAT)",
-      "Specific Performance of Contracts & Injunction Suits",
-      "Partition, Declaration of Title & Succession Disputes",
-      "Commercial Lease Agreement Drafting & Eviction Petitions",
-      "Land Acquisition & Fair Compensation References",
-    ],
-    courts: [
-      "Delhi Real Estate Regulatory Authority & Appellate Tribunal",
-      "District Courts of Delhi & NCR",
-      "High Court of Delhi",
-    ],
-    iconName: "Briefcase",
+    iconName: "Building2",
     image: "/images/practice/real-estate-rera-property.jpg",
   },
   {
-    id: "intellectual-property-technology",
-    slug: "intellectual-property-technology",
-    title: "Intellectual Property & Technology",
+    id: "alternative-dispute-resolution-mediation",
+    slug: "alternative-dispute-resolution-mediation",
+    title: "Mediation & Alternative Dispute Resolution (ADR)",
     shortDescription:
-      "Litigation and advisory regarding trademark infringement, copyright protection, patent disputes, trade secrets, and emerging digital technology law.",
+      "Structured commercial mediation, pre-litigation settlement negotiations, and consensual dispute facilitation preserving enterprise relationships.",
     detailedOverview:
-      "The chamber represents brand owners and technology ventures in protecting proprietary IP assets. Our advocates handle trademark opposition, passing-off suits, Anton Piller (search & seizure) applications, John Doe injunctions in piracy matters, and domain name disputes before the Intellectual Property Division of the High Court.",
+      "Recognizing that prolonged litigation can erode enterprise value, Newshore Legal provides dedicated Alternative Dispute Resolution (ADR) and mediation services. Our certified mediators and advocates guide clients through confidential negotiations, dispute avoidance protocols, and legally binding settlement agreements.",
     keyAreas: [
-      "Trademark Infringement & Passing-Off Actions",
-      "Copyright Protection, Software Licensing & Anti-Piracy Injunctions",
-      "Patent Validity & Revocation Proceedings",
-      "Trade Secrets & Confidential Information Enforcement",
-      "Commercial IP Division Litigation",
+      "Pre-Litigation Mediation under Commercial Courts Act",
+      "Commercial Contract Settlement Conferences",
+      "Cross-Border Business & Investor Mediation",
+      "Drafting & Registration of Legally Binding Settlement Deeds",
+      "Dispute Avoidance Counsel for Strategic Joint Ventures",
     ],
     courts: [
-      "Intellectual Property Division, High Court of Delhi",
-      "Trade Marks Registry, New Delhi",
-      "District Commercial Courts",
+      "Delhi High Court Mediation and Conciliation Centre (Samadhan)",
+      "Private Institutional Mediation Tribunals",
+      "Arbitration & Conciliation Forums",
     ],
     iconName: "FileText",
     image: "/images/practice/intellectual-property-technology.jpg",
@@ -275,16 +276,16 @@ export const advocates: AdvocateProfile[] = [
     id: "rajesh-narayan",
     slug: "rajesh-narayan",
     name: "Rajesh Narayan",
-    designation: "Founder & Managing Counsel",
+    designation: "Managing Partner & Counsel",
     barEnrollment: "Enrolled with the Bar Council of Delhi (D/1482/2004)",
     education: [
-      "B.A. LL.B. (Hons.), National Law School of India University (NLSIU), Bengaluru",
+      "B.A. LL.B. (Hons.), National Law School of India University (NLSIU)",
       "LL.M. in International Dispute Settlement, University of Cambridge, UK",
     ],
     primaryPractices: [
-      "Commercial Litigation & Arbitration",
-      "Constitutional & Administrative Law",
-      "Insolvency & Bankruptcy Code",
+      "Commercial Dispute Resolution & Arbitration",
+      "Immigration Litigation & Judicial Review",
+      "Cross-Border Contract Enforcement",
     ],
     admissions: [
       "Supreme Court of India (Advocate-on-Record)",
@@ -292,56 +293,56 @@ export const advocates: AdvocateProfile[] = [
       "Chartered Institute of Arbitrators (MCIArb)",
     ],
     biography:
-      "With over two decades of trial and appellate experience, Rajesh Narayan leads the chambers' commercial dispute and constitutional law practices. He has argued extensively before the Supreme Court of India, multiple State High Courts, and Arbitral Tribunals in high-value infrastructure, corporate, and constitutional matters. Prior to founding Apex Chambers, he trained with senior advocates at the Supreme Court of India.",
+      "With over two decades of trial and appellate experience, Rajesh Narayan leads Newshore Legal's dispute resolution and cross-border practice. He has argued extensively before the Supreme Court of India, multiple State High Courts, and Arbitral Tribunals in high-value commercial, immigration, and regulatory matters.",
     image: "/images/advocates/rajesh-narayan.jpg",
   },
   {
     id: "meenakshi-swaminathan",
     slug: "meenakshi-swaminathan",
     name: "Meenakshi Swaminathan",
-    designation: "Partner - Corporate & Insolvency Practice",
+    designation: "Partner - Global Immigration & Compliance",
     barEnrollment: "Enrolled with the Bar Council of Delhi (D/2210/2009)",
     education: [
       "B.B.A. LL.B. (Hons.), Symbiosis Law School, Pune",
-      "Post-Graduate Diploma in Corporate Law & Governance, ILI, New Delhi",
+      "Post-Graduate Diploma in International Law & Human Rights, ILI",
     ],
     primaryPractices: [
-      "Corporate Insolvency & Liquidation (IBC)",
-      "Company Law & Mergers",
-      "Banking & Financial Regulatory Advisory",
+      "Global Corporate & Business Immigration",
+      "Citizenship & Residency by Investment",
+      "FRRO Compliance & Visa Regulatory Advisory",
     ],
     admissions: [
       "Supreme Court of India",
       "High Court of Delhi",
-      "National Company Law Tribunal & Appellate Tribunal (NCLAT)",
+      "International Bar Association (Immigration & Nationality Section)",
     ],
     biography:
-      "Meenakshi Swaminathan oversees the chambers' corporate restructuring and insolvency advisory. She regularly appears before the Principal and Regional Benches of the NCLT and NCLAT on behalf of institutional creditors and resolution applicants. She brings significant domain expertise in navigating stressed asset acquisitions and complex shareholder agreements.",
+      "Meenakshi Swaminathan oversees Newshore Legal's immigration law and cross-border mobility practice. She regularly counsels multinational corporations, expatriates, and high-net-worth families on corporate intra-company transfers, residency by investment, citizenship renunciation, and FRRO statutory compliance.",
     image: "/images/advocates/meenakshi-swaminathan.jpg",
   },
   {
     id: "anand-vardhan-singh",
     slug: "anand-vardhan-singh",
     name: "Anand Vardhan Singh",
-    designation: "Partner - White-Collar Crime & Special Litigation",
+    designation: "Partner - Civil Litigation & Mediation",
     barEnrollment:
       "Enrolled with the Bar Council of Uttar Pradesh & Delhi (D/3115/2012)",
     education: [
       "B.A. LL.B., Faculty of Law, University of Delhi (CLC)",
-      "Diploma in Cyber Law & Forensics",
+      "Certified Commercial Mediator (Samadhan / IIAM)",
     ],
     primaryPractices: [
-      "White-Collar Crime Defense",
-      "PMLA & Special Acts Litigation",
-      "Commercial Property & RERA Disputes",
+      "Civil & Commercial Litigation",
+      "Mediation & ADR Settlement",
+      "Immigration Writs & Appellate Advocacy",
     ],
     admissions: [
       "Supreme Court of India",
       "High Court of Delhi",
-      "Special CBI & PMLA Courts (Rouse Avenue, New Delhi)",
+      "Delhi High Court Mediation Centre",
     ],
     biography:
-      "Anand Vardhan Singh focuses on corporate penal liability, economic offences, and complex trials under special statutes. He has successfully represented corporate directors and professionals in investigations conducted by statutory enforcement agencies. His advocacy pairs aggressive trial strategy with deep procedural expertise in statutory criminal jurisprudence.",
+      "Anand Vardhan Singh focuses on civil litigation, commercial contract enforcement, and Alternative Dispute Resolution. A trained commercial mediator, he has successfully resolved contentious disputes out of court while maintaining an aggressive appellate practice before the High Court of Delhi and Supreme Court.",
     image: "/images/advocates/anand-vardhan-singh.jpg",
   },
 ];

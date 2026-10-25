@@ -7,7 +7,6 @@ import {
   Scale,
   ShieldCheck,
 } from "lucide-react";
-import Link from "next/link";
 import { firmConfig, practiceAreas } from "@/config/firm";
 
 export function Footer() {
@@ -54,24 +53,24 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs text-primary-foreground/75">
               {practiceAreas.slice(0, 5).map((area) => (
                 <li key={area.id}>
-                  <Link
-                    href={`/practice-areas/${area.slug}`}
+                  <a
+                    href="#practice"
                     className="hover:text-accent transition-colors flex items-center justify-between group"
                   >
                     <span>{area.title}</span>
                     <span className="text-accent/40 group-hover:text-accent transition-colors">
                       →
                     </span>
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li className="pt-1">
-                <Link
-                  href="/practice-areas"
+                <a
+                  href="#practice"
                   className="text-accent hover:underline inline-flex items-center gap-1 font-medium text-xs"
                 >
                   View All Disciplines <ExternalLink className="w-3 h-3" />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -83,41 +82,38 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-primary-foreground/75">
               <li>
-                <Link href="/" className="hover:text-accent transition-colors">
+                <a href="#hero" className="hover:text-accent transition-colors">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/about"
+                <a
+                  href="#about"
                   className="hover:text-accent transition-colors"
                 >
                   About the Chambers
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/team"
-                  className="hover:text-accent transition-colors"
-                >
+                <a href="#team" className="hover:text-accent transition-colors">
                   Advocates & Partners
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/contact"
+                <a
+                  href="#contact"
                   className="hover:text-accent transition-colors"
                 >
                   Contact & Chambers
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  href="/disclaimer"
+                <a
+                  href="#disclaimer"
                   className="text-accent hover:underline font-medium inline-flex items-center gap-1"
                 >
                   Statutory Disclaimer
-                </Link>
+                </a>
               </li>
             </ul>
 
@@ -181,9 +177,9 @@ export function Footer() {
             orientation only, as permitted under Rule 36 of the Bar Council of
             India Rules. Accessing this website creates no advocate-client
             relationship. Read our{" "}
-            <Link href="/disclaimer" className="text-accent hover:underline">
+            <a href="#disclaimer" className="text-accent hover:underline">
               Statutory Disclaimer
-            </Link>
+            </a>
             .
           </p>
         </div>
