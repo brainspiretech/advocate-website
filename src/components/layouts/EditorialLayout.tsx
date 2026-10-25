@@ -419,17 +419,11 @@ export function EditorialLayout() {
         id="disclaimer"
         className="py-6 px-4 border-t border-border bg-surface text-xs font-serif text-foreground-muted"
       >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-accent" />
-            <span>
-              Published strictly in accordance with{" "}
-              {firmConfig.bciCompliance.ruleReference}. Non-solicitous legal
-              information.
-            </span>
-          </div>
-          <span className="font-semibold text-accent">
-            Rule 36 Compliance Notice
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center">
+          <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+          <span>
+            Strictly informational publication compliant with{" "}
+            {firmConfig.bciCompliance.ruleReference}.
           </span>
         </div>
       </section>

@@ -440,16 +440,11 @@ export function LuxuryLayout() {
         id="disclaimer"
         className="py-6 px-4 sm:px-6 lg:px-8 border-t border-border bg-surface text-xs text-foreground-muted"
       >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
-            <span>
-              Strictly non-solicitous informational resource published under{" "}
-              {firmConfig.bciCompliance.ruleReference}.
-            </span>
-          </div>
-          <span className="text-accent font-medium">
-            Bar Council of India Rule 36 Compliant
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center">
+          <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
+          <span>
+            Strictly informational publication compliant with{" "}
+            {firmConfig.bciCompliance.ruleReference}.
           </span>
         </div>
       </section>

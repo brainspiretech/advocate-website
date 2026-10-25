@@ -5,7 +5,6 @@ import {
   MapPin,
   Phone,
   Scale,
-  ShieldCheck,
 } from "lucide-react";
 import { firmConfig, practiceAreas } from "@/config/firm";
 
@@ -36,13 +35,6 @@ export function Footer() {
             <p className="text-xs text-primary-foreground/75 leading-relaxed">
               {firmConfig.shortDescription}
             </p>
-
-            <div className="pt-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-dark/80 border border-primary-light/50 rounded-sm text-[11px] text-accent">
-                <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
-                <span>Bar Council of India Rule 36 Compliant</span>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Core Practice Disciplines */}

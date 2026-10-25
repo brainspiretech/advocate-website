@@ -328,10 +328,12 @@ export function BrutalistLayout() {
 
       <section
         id="disclaimer"
-        className="p-4 bg-foreground text-background text-xs flex flex-col sm:flex-row items-center justify-between gap-4"
+        className="p-4 bg-foreground text-background text-xs text-center"
       >
-        <span>{"// COMPLIANCE WITH BCI RULE 36 ENFORCED"}</span>
-        <span>NO SOLICITATION INTENDED</span>
+        <span>
+          {"//"} STRICTLY INFORMATIONAL PUBLICATION COMPLIANT WITH{" "}
+          {firmConfig.bciCompliance.ruleReference.toUpperCase()}
+        </span>
       </section>
     </div>
   );

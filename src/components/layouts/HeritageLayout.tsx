@@ -351,13 +351,10 @@ export function HeritageLayout() {
         id="disclaimer"
         className="py-6 px-4 border-t border-border bg-surface text-xs font-serif text-foreground-muted"
       >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto text-center">
           <span>
             Strictly informational publication compliant with{" "}
             {firmConfig.bciCompliance.ruleReference}.
-          </span>
-          <span className="text-accent font-semibold">
-            Bar Council of India Rule 36 Compliant
           </span>
         </div>
       </section>
